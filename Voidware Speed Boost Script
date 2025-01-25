@@ -2,68 +2,81 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoid
 -- LocalScript in StarterPlayer -> StarterPlayerScripts
 
 local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoid = character:WaitForChild("Humanoid")
 
--- Store the original walk speed
-local originalWalkSpeed = humanoid.WalkSpeed
+-- Function to reapply the damage and regeneration logic
+local function startDamageRegenerationScript(character)
+    local humanoid = character:WaitForChild("Humanoid")
 
--- Create ScreenGui and TextLabel for displaying health
-local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = player:WaitForChild("PlayerGui")
+    -- Store the original walk speed
+    local originalWalkSpeed = humanoid.WalkSpeed
 
-local healthLabel = Instance.new("TextLabel")
-healthLabel.Size = UDim2.new(0, 200, 0, 50)
-healthLabel.Position = UDim2.new(0, 10, 0, 10)
-healthLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-healthLabel.BackgroundTransparency = 1
-healthLabel.TextSize = 24
-healthLabel.Parent = screenGui
+    -- Create ScreenGui and TextLabel for displaying health
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = player:WaitForChild("PlayerGui")
 
--- Function to apply damage until health reaches 40
-local function applyDamage()
-    while humanoid.Health > 40 do
-        wait(1.8)  -- Apply damage every 1.8 seconds
-        humanoid.Health = humanoid.Health - 10  -- Apply 10 damage every 1.8 seconds
-        healthLabel.Text = "Health: " .. math.floor(humanoid.Health)  -- Update health display
-        print("Taking damage, current health: " .. humanoid.Health)  -- Debug print
+    local healthLabel = Instance.new("TextLabel")
+    healthLabel.Size = UDim2.new(0, 200, 0, 50)
+    healthLabel.Position = UDim2.new(0, 10, 0, 10)
+    healthLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    healthLabel.BackgroundTransparency = 1
+    healthLabel.TextSize = 24
+    healthLabel.Parent = screenGui
+
+    -- Function to apply damage until health reaches 40
+    local function applyDamage()
+        while humanoid.Health > 40 do
+            wait(1.8)  -- Apply damage every 1.8 seconds
+            humanoid.Health = humanoid.Health - 10  -- Apply 10 damage every 1.8 seconds
+            healthLabel.Text = "Health: " .. math.floor(humanoid.Health)  -- Update health display
+            print("Taking damage, current health: " .. humanoid.Health)  -- Debug print
+        end
+    end
+
+    -- Function to regenerate health back to 100
+    local function regenerateHealth()
+        while humanoid.Health < 100 do
+            wait(0.5)  -- Regenerate health every 0.5 seconds
+            humanoid.Health = humanoid.Health + 5  -- Regenerate 5 health
+            healthLabel.Text = "Health: " .. math.floor(humanoid.Health)  -- Update health display
+            print("Regenerating health, current health: " .. humanoid.Health)  -- Debug print
+        end
+    end
+
+    -- Function to change walk speed temporarily after taking damage
+    local function onDamage()
+        -- Set walk speed to 35 for 0.3 seconds
+        humanoid.WalkSpeed = 35
+        print("Walk speed changed to 35")  -- Debug print
+        
+        -- Wait for 0.3 seconds
+        wait(0.3)
+        
+        -- Reset walk speed back to original
+        humanoid.WalkSpeed = originalWalkSpeed
+        print("Walk speed reset to original")  -- Debug print
+    end
+
+    -- Detect when the player takes damage and apply the effects
+    humanoid.HealthChanged:Connect(function(health)
+        -- Check if health has decreased (damage has been taken)
+        if health < humanoid.Health then
+            onDamage()  -- Call the function to change walk speed
+        end
+    end)
+
+    -- Main loop to apply damage until health reaches 40, then regenerate
+    while true do
+        applyDamage()  -- Apply damage until health reaches 40
+        regenerateHealth()  -- Regenerate health back to 100
     end
 end
 
--- Function to regenerate health back to 100
-local function regenerateHealth()
-    while humanoid.Health < 100 do
-        wait(0.5)  -- Regenerate health every 0.5 seconds
-        humanoid.Health = humanoid.Health + 5  -- Regenerate 5 health
-        healthLabel.Text = "Health: " .. math.floor(humanoid.Health)  -- Update health display
-        print("Regenerating health, current health: " .. humanoid.Health)  -- Debug print
-    end
-end
-
--- Function to change walk speed temporarily after taking damage
-local function onDamage()
-    -- Set walk speed to 35 for 0.3 seconds
-    humanoid.WalkSpeed = 35
-    print("Walk speed changed to 35")  -- Debug print
-    
-    -- Wait for 0.3 seconds
-    wait(0.3)
-    
-    -- Reset walk speed back to original
-    humanoid.WalkSpeed = originalWalkSpeed
-    print("Walk speed reset to original")  -- Debug print
-end
-
--- Detect when the player takes damage and apply the effects
-humanoid.HealthChanged:Connect(function(health)
-    -- Check if health has decreased (damage has been taken)
-    if health < humanoid.Health then
-        onDamage()  -- Call the function to change walk speed
-    end
+-- Ensure the script runs even after death
+player.CharacterAdded:Connect(function(character)
+    startDamageRegenerationScript(character)  -- Restart the script when the character respawns
 end)
 
--- Main loop to apply damage until health reaches 40, then regenerate
-while true do
-    applyDamage()  -- Apply damage until health reaches 40
-    regenerateHealth()  -- Regenerate health back to 100
+-- Start the script for the current character if it's already loaded
+if player.Character then
+    startDamageRegenerationScript(player.Character)
 end
