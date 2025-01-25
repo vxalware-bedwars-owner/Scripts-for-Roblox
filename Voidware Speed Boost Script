@@ -25,8 +25,8 @@ local function startDamageRegenerationScript(character)
     -- Function to apply damage until health reaches 40
     local function applyDamage()
         while humanoid.Health > 40 do
-            wait(1.5)  -- Apply damage every 1.5 seconds
-            humanoid.Health = humanoid.Health - 10  -- Apply 10 damage every 1.7 seconds
+            wait(2)  -- Apply damage every 2 seconds
+            humanoid.Health = humanoid.Health - 10  -- Apply 10 damage every 2 seconds
             healthLabel.Text = "Health: " .. math.floor(humanoid.Health)  -- Update health display
             print("Taking damage, current health: " .. humanoid.Health)  -- Debug print
         end
