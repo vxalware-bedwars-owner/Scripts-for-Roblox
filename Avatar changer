@@ -1,0 +1,44 @@
+-- THIS SCRIPT WILL CHANGE YOUR AVATAR TO A DIFFERENT ONE!
+local player = game.Players.LocalPlayer
+local targetPlayerId = 3942084917 -- Replace with the target player's user ID (must be a valid ID)
+local avatarService = game:GetService("AvatarEditorService")
+
+-- Function to change your avatar's clothing (shirt, pants, hats) to match another player
+local function changeAvatarAppearance()
+    -- Get the target player's avatar
+    local targetPlayer = game.Players:GetPlayerByUserId(targetPlayerId)
+
+    if targetPlayer then
+        -- Wait for the target player's character to load
+        local targetCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
+        
+        -- Clone the target player's clothing (shirt and pants)
+        local shirt = targetCharacter:FindFirstChildOfClass("Shirt")
+        local pants = targetCharacter:FindFirstChildOfClass("Pants")
+        
+        -- Clone and apply shirt
+        if shirt then
+            local newShirt = shirt:Clone()
+            newShirt.Parent = player.Character:WaitForChild("UpperTorso")
+        end
+        
+        -- Clone and apply pants
+        if pants then
+            local newPants = pants:Clone()
+            newPants.Parent = player.Character:WaitForChild("LowerTorso")
+        end
+        
+        -- Clone hats and accessories
+        for _, accessory in pairs(targetCharacter:GetChildren()) do
+            if accessory:IsA("Accessory") then
+                local newAccessory = accessory:Clone()
+                newAccessory.Parent = player.Character
+            end
+        end
+    else
+        warn("Target player not found or offline.")
+    end
+end
+
+-- Call the function to change your avatar's appearance
+changeAvatarAppearance()
