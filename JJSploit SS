@@ -9,8 +9,3 @@ btns:Button("Voidware", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua", true))()
 DiscordLib:Notification("Notification", "Executed Voidware", "Okay!")
 end)
-
-btns:Button("CatVxpe", function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/1FLVx0KN", true))()
-DiscordLib:Notification("Notification", "Executed CatVxpe", "Okay!")
-end)
