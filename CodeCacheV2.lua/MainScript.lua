@@ -10,8 +10,19 @@ local drop =
     drops:Dropdown(
     "Pick me!",
     {"Redzhub", "Ronix Hub", "Speed Hub X", "Alchemy Hub", "Kncrypt"},
-    function(bool)
-        print(bool)
+    function(selectedHub)
+        -- Check which hub was selected and print the corresponding message
+        if selectedHub == "Redzhub" then
+            print("Successfully executed the redz hub script")
+        elseif selectedHub == "Ronix Hub" then
+            print("Successfully executed the ronix hub script")
+        elseif selectedHub == "Speed Hub X" then
+            print("Successfully executed the speed hub script")
+        elseif selectedHub == "Alchemy Hub" then
+            print("Successfully executed the alchemy hub script")
+        elseif selectedHub == "Kncrypt" then
+            print("Successfully executed the kncrypt script")
+        end
     end
 )
 print("Finished loading! SCRIPT STILL IN DEVELOPMENT!")
