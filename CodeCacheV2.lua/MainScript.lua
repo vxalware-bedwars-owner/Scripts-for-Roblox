@@ -9,8 +9,9 @@ local drops = serv:Channel("Blox Fruits")
 local drop =
     drops:Dropdown(
     "Pick me!",
-    {"Option 1", "Option 2", "Option 3", "Option 4", "Option 5"},
+    {"Redzhub", "Ronix Hub", "Speed Hub X", "Alchemy Hub", "Kncrypt"},
     function(bool)
         print(bool)
     end
 )
+print("Finished loading! SCRIPT STILL IN DEVELOPMENT!")
