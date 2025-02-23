@@ -8,6 +8,10 @@ local main = serv:Channel("A Games")
 
 local main = serv:Channel("B Games")
 
+local drop = drops:Dropdown("Blox fruits script hubs",{"Redz Hub","Ronix Hub","Speed Hub X","Alchemy Hub","Kncrypt"}, function(bool)
+print(bool)
+end)
+
 local main = serv:Channel("C Games")
 
 local main = serv:Channel("D Games")
