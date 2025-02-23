@@ -8,6 +8,29 @@ local main2 = serv:Channel("A Games")
 
 local main3 = serv:Channel("B Games")
 
+local drop =
+    drops:Dropdown(
+    "Pick me!",
+    {"Option 1", "Option 2", "Option 3", "Option 4", "Option 5"},
+    function(bool)
+        print(bool)
+    end
+)
+
+drops:Button(
+    "Clear",
+    function()
+        drop:Clear()
+    end
+)
+
+drops:Button(
+    "Add option",
+    function()
+        drop:Add("Option")
+    end
+)
+
 local main4 = serv:Channel("C Games")
 
 local main5 = serv:Channel("D Games")
