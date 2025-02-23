@@ -2,7 +2,7 @@ local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bl
 
 local win = DiscordLib:Window("CodeCacheV2 Re-made by SynthX, A Nerd, and Vxalware")
 
-local serv = win:Server("Preview", "http://www.roblox.com/asset/?id=6031075938")
+local serv = win:Server("Game Scripts", "http://www.roblox.com/asset/?id=6031075938")
 
 local drops = serv:Channel("Blox Fruits")
 
