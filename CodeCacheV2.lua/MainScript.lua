@@ -8,7 +8,7 @@ local drops = serv:Channel("Blox Fruits")
 
 local drop =
     drops:Dropdown(
-    "Pick me!",
+    "Blox Fruits Script Hubs 🍎",
     {"Redzhub", "Ronix Hub", "Speed Hub X", "Alchemy Hub", "Kncrypt"},
     function(selectedHub)
         -- Check which hub was selected and print the corresponding message
