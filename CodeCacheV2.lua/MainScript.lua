@@ -4,7 +4,7 @@ local win = DiscordLib:Window("CodeCacheV2 Re-made by SynthX, A Nerd, and Vxalwa
 
 local serv = win:Server("Game Scripts", "http://www.roblox.com/asset/?id=6031075938")
 
-local drops = serv:Channel("Blox Fruits")
+local drops = serv:Channel("A Games")
 
 local drop =
     drops:Dropdown(
@@ -25,4 +25,53 @@ local drop =
         end
     end
 )
-print("Finished loading! SCRIPT STILL IN DEVELOPMENT!")
+
+local drops = serv:Channel("B Games")
+
+local drops = serv:Channel("C Games")
+
+local drops = serv:Channel("D Games")
+
+local drops = serv:Channel("E Games")
+
+local drops = serv:Channel("F Games")
+
+local drops = serv:Channel("G Games")
+
+local drops = serv:Channel("H Games")
+
+local drops = serv:Channel("I Games")
+
+local drops = serv:Channel("J Games")
+
+local drops = serv:Channel("K Games")
+
+local drops = serv:Channel("L Games")
+
+local drops = serv:Channel("M Games")
+
+local drops = serv:Channel("N Games")
+
+local drops = serv:Channel("O Games")
+
+local drops = serv:Channel("P Games")
+
+local drops = serv:Channel("Q Games")
+
+local drops = serv:Channel("R Games")
+
+local drops = serv:Channel("S Games")
+
+local drops = serv:Channel("T Games")
+
+local drops = serv:Channel("U Games")
+
+local drops = serv:Channel("V Games")
+
+local drops = serv:Channel("W Games")
+
+local drops = serv:Channel("X Games")
+
+local drops = serv:Channel("Y Games")
+
+local drops = serv:Channel("Z Games")
