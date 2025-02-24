@@ -6,6 +6,8 @@ local serv = win:Server("Game Scripts", "http://www.roblox.com/asset/?id=6031075
 
 local drops = serv:Channel("A Games")
 
+local drops = serv:Channel("B Games")
+
 local drop =
     drops:Dropdown(
     "Blox Fruits Script Hubs 🍎",
@@ -26,7 +28,25 @@ local drop =
     end
 )
 
-local drops = serv:Channel("B Games")
+local drop =
+    drops:Dropdown(
+    "Bedwars Scripts 🛏️",
+    {"Voidware", "Vxalware", "Aurora V4", "Vape V4", "AlSploit (Mobile only)"},
+    function(selectedHub)
+        -- Check which hub was selected and print the corresponding message
+        if selectedHub == "Voidware" then
+            print("Successfully executed the redz hub script")
+        elseif selectedHub == "Ronix Hub" then
+            print("Successfully executed the ronix hub script")
+        elseif selectedHub == "Speed Hub X" then
+            print("Successfully executed the speed hub script")
+        elseif selectedHub == "Alchemy Hub" then
+            print("Successfully executed the alchemy hub script")
+        elseif selectedHub == "Kncrypt" then
+            print("Successfully executed the kncrypt script")
+        end
+    end
+)
 
 local drops = serv:Channel("C Games")
 
