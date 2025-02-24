@@ -35,15 +35,15 @@ local drop =
     function(selectedHub)
         -- Check which hub was selected and print the corresponding message
         if selectedHub == "Voidware" then
-            print("Successfully executed the redz hub script")
-        elseif selectedHub == "Ronix Hub" then
-            print("Successfully executed the ronix hub script")
-        elseif selectedHub == "Speed Hub X" then
-            print("Successfully executed the speed hub script")
-        elseif selectedHub == "Alchemy Hub" then
-            print("Successfully executed the alchemy hub script")
-        elseif selectedHub == "Kncrypt" then
-            print("Successfully executed the kncrypt script")
+            print("Successfully executed the Voidware script")
+        elseif selectedHub == "Vxalware" then
+            print("Successfully executed the Vxalware script")
+        elseif selectedHub == "Aurora V4" then
+            print("Successfully executed the Aurora V4 script")
+        elseif selectedHub == "Vape V4" then
+            print("Successfully executed the Vape V4 script")
+        elseif selectedHub == "AlSploit (Mobile only)" then
+            print("Successfully executed the AlSploit script")
         end
     end
 )
