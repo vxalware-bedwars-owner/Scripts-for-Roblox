@@ -15,15 +15,15 @@ local drop =
     function(selectedHub)
         -- Check which hub was selected and print the corresponding message
         if selectedHub == "Redzhub" then
-            print("Successfully executed the redz hub script")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
         elseif selectedHub == "Ronix Hub" then
-            print("Successfully executed the ronix hub script")
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua"))()
         elseif selectedHub == "Speed Hub X" then
-            print("Successfully executed the speed hub script")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
         elseif selectedHub == "Alchemy Hub" then
-            print("Successfully executed the alchemy hub script")
+            loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))()
         elseif selectedHub == "Kncrypt" then
-            print("Successfully executed the kncrypt script")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/sources/BloxFruit.lua"))()
         end
     end
 )
@@ -35,15 +35,15 @@ local drop =
     function(selectedHub)
         -- Check which hub was selected and print the corresponding message
         if selectedHub == "Voidware" then
-            print("Successfully executed the Voidware script")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua", true))()
         elseif selectedHub == "Vxalware" then
-            print("Successfully executed the Vxalware script")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Vxalware-Rewrite/refs/heads/main/Vxware-Bedwars.lua"))()
         elseif selectedHub == "Aurora V4" then
-            print("Successfully executed the Aurora V4 script")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/Aurora/main/Aurora_Loader"))()
         elseif selectedHub == "Vape V4" then
-            print("Successfully executed the Vape V4 script")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
         elseif selectedHub == "AlSploit (Mobile only)" then
-            print("Successfully executed the AlSploit script")
+            loadstring(game:HttpGet("https://alsploit.bedwars.workers.dev/MainScript.lua?Key=yyy7eG1DjWIulkrfnzDrFP2No1H3si8YVODj93SqCd0jFh1CVk", true))()
         end
     end
 )
