@@ -89,15 +89,17 @@ end
 if not syn.protect_gui then
     return nil
 else
-    getgenv().getgui = function(val)
+    getgenv().getgui = function()
         if val == nil then return gethui() end
-        return syn.protect_gui(val)
+        if syn.protect_gui then
+            return syn.protect_gui('Discord')
+        end
     end
 end
 
 local Discord = Instance.new("ScreenGui")
 Discord.Name = "Discord"
-Discord.Parent = gethui() or game.CoreGui or game.PlayerGui
+Discord.Parent = getgui()
 Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 function DiscordLib:Window(text)
