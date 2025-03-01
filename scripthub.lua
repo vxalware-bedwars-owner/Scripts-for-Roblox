@@ -1,4 +1,4 @@
-local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
+local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/sstvskids/Scripts-for-Roblox/refs/heads/main/libs/gui.lua"))()
 local win = DiscordLib:Window("CodeCacheV2 Re-made by SynthX, A Nerd, and Vxalware")
 local serv = win:Server("Game Scripts", "http://www.roblox.com/asset/?id=6031075938")
 local core = {
@@ -34,7 +34,7 @@ local function gettable(tbl)
     return tables
 end
 
-local drop = core.tabs.bloxfruits:Dropdown(
+core.tabs.bloxfruits:Dropdown(
     "Blox Fruits Script Hubs 🍎",
     gettable(scripts.fruitscripts),
     function(value)
@@ -43,7 +43,7 @@ local drop = core.tabs.bloxfruits:Dropdown(
     end
 )
 
-local drop = core.tabs.bloxfruits:Dropdown(
+core.tabs.bloxfruits:Dropdown(
     "Bedwars Scripts 🛏️",
     gettable(scripts.bedwarscripts),
     function(value)

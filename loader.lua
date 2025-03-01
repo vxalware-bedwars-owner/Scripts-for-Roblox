@@ -1,0 +1,1 @@
+return loadstring(game:HttpGet("https://raw.githubusercontent.com/sstvskids/Scripts-for-Roblox/refs/heads/main/scripthub.lua", true))()
