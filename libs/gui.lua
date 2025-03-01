@@ -82,9 +82,18 @@ local function MakeDraggable(topbarobject, object)
 end
 
 if not gethui() then
-    if not syn.protect_gui then return nil end
-    getgenv().gethui = syn.protect_gui()
-end      
+    getgenv().gethui = function()
+        return game.CoreGui or game.PlayerGui
+    end
+end
+if not syn.protect_gui then
+    return nil
+else
+    getgenv().getgui = function(val)
+        if val == nil then return gethui() end
+        return syn.protect_gui(val)
+    end
+end
 
 local Discord = Instance.new("ScreenGui")
 Discord.Name = "Discord"
