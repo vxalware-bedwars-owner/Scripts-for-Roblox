@@ -26,9 +26,9 @@ local scripts = {
     }
 }
 
-local function gettable(tbl)
+local function gettable(v)
     local tables = {}
-    for i, _ in pairs(tbl) do
+    for i, _ in pairs(v) do
         table.insert(tables, i)
     end
     return tables
