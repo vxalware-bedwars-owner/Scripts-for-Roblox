@@ -3,14 +3,14 @@ local CoreGui = game:GetService("CoreGui")
 local TweenService = game:GetService("TweenService")
 local Lighting = game:GetService("Lighting")
 
---> ScriptHub V3 <--
+--> CodeCache Beta <--
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/CodeCacheV2.lua/MainScript.lua", true))()
 
---> ScriptHub V3 Variables <--
+--> CodeCache Beta Variables <--
 local DiscordUI = CoreGui:FindFirstChild("Discord")
 local DiscordUIMainFrame = DiscordUI:FindFirstChild("MainFrame")
 
---> ScriptHub V3 UI Setup <--
+--> CodeCache Beta UI Setup <--
 DiscordUI.Enabled = false
 DiscordUIMainFrame.Position = UDim2.new(0.5, 0, -1, 0)
 
