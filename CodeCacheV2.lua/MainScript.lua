@@ -6,6 +6,22 @@ local drops = serv:Channel("A Game Scripts")
 
 local drops = serv:Channel("B Game Scripts")
 
+local drop = drops:Dropdown("Pick Me!", {"Option 1", "Option 2", "Option 3", "Option 4", "Option 5"}, function(selectedOption)
+    
+    if selectedOption == "Option 1" then
+        loadstring("Game_NameV1")()
+    elseif selectedOption == "Option 2" then
+        loadstring("Game_NameV2")()
+    elseif selectedOption == "Option 3" then
+        loadstring("Game_NameV3")()
+    elseif selectedOption == "Option 4" then
+        loadstring("Game_NameV4")()
+    elseif selectedOption == "Option 5" then
+        loadstring("Game_NameV5")()
+    end
+    print("You selected: " .. selectedOption)
+end)
+
 local drops = serv:Channel("C Game Scripts")
 
 local drops = serv:Channel("D Game Scripts")
