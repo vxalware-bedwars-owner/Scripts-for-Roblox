@@ -81,25 +81,9 @@ local function MakeDraggable(topbarobject, object)
 	)
 end
 
-if not gethui() then
-    getgenv().gethui = function()
-        return game.CoreGui or game.PlayerGui
-    end
-end
-if not syn.protect_gui then
-    return nil
-else
-    getgenv().getgui = function()
-        if val == nil then return gethui() end
-        if syn.protect_gui then
-            return syn.protect_gui('Discord')
-        end
-    end
-end
-
 local Discord = Instance.new("ScreenGui")
 Discord.Name = "Discord"
-Discord.Parent = getgui()
+Discord.Parent = gethui() or game.CoreGui or game.PlayerGui
 Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 function DiscordLib:Window(text)
