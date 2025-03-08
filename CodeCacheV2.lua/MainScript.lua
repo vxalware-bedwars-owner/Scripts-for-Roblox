@@ -6,7 +6,7 @@ local drops = serv:Channel("A Game Scripts")
 
 local drops = serv:Channel("B Game Scripts")
 
-local drop = drops:Dropdown("Pick Me!", {"Option 1", "Option 2", "Option 3", "Option 4", "Option 5"}, function(selectedOption)
+local drop = drops:Dropdown("Blox Fruits 🍎", {"Redz Hub", "Speed Hub X", "Kncrypt Hub", "Alchemy Hub"}, function(selectedOption)
     
     if selectedOption == "Option 1" then
         loadstring("Game_NameV1")()
