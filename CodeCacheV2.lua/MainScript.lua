@@ -6,18 +6,18 @@ local drops = serv:Channel("A Game Scripts")
 
 local drops = serv:Channel("B Game Scripts")
 
-local drop = drops:Dropdown("Blox Fruits 🍎", {"Redz Hub", "Speed Hub X", "Kncrypt Hub", "Alchemy Hub"}, function(selectedOption)
+local drop = drops:Dropdown("Blox Fruits 🍎", {"Redz Hub", "Speed Hub X", "Kncrypt Hub", "Alchemy Hub", "Ronix Hub"}, function(selectedOption)
     
-    if selectedOption == "Option 1" then
-        loadstring("Game_NameV1")()
-    elseif selectedOption == "Option 2" then
-        loadstring("Game_NameV2")()
-    elseif selectedOption == "Option 3" then
-        loadstring("Game_NameV3")()
-    elseif selectedOption == "Option 4" then
-        loadstring("Game_NameV4")()
-    elseif selectedOption == "Option 5" then
-        loadstring("Game_NameV5")()
+    if selectedOption == "Redz Hub" then
+        loadstring("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua")()
+    elseif selectedOption == "Speed Hub X" then
+        loadstring("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua")()
+    elseif selectedOption == "Kncrypt Hub" then
+        loadstring("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/sources/BloxFruit.lua")()
+    elseif selectedOption == "Alchemy Hub" then
+        loadstring("https://scripts.alchemyhub.xyz")()
+    elseif selectedOption == "Ronix Hub" then
+        loadstring("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua")()
     end
     print("You selected: " .. selectedOption)
 end)
