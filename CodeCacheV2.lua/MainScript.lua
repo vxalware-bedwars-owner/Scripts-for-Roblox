@@ -25,15 +25,15 @@ end)
 local drop = drops:Dropdown("Bedwars 🛏️", {"Vape V4", "Night", "AlSploit", "Vxalware", "AuroraGPT", "Voidpaste"}, function(selectedOption)
     
     if selectedOption == "Vape V4" then
-        loadstring("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua")() -- Trying out skidvape4roblox
+        loadstring("https://raw.githubusercontent.com/sstvskids/VapeV4ForRoblox/main/NewMainScript.lua")() -- Trying out skidvape4roblox
     elseif selectedOption == "Night" then
-        loadstring("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua")()
+        loadstring("https://raw.githubusercontent.com/warprbx/NightRewrite/refs/heads/main/Night/Loader.luau")()
     elseif selectedOption == "AlSploit" then
-        loadstring("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/sources/BloxFruit.lua")()
+        loadstring("https://dpaste.com/BQ7GD3DD2.txt")()
     elseif selectedOption == "Vxalware" then
         loadstring("https://raw.githubusercontent.com/vxalware-bedwars-owner/Vxalware-Rewrite/refs/heads/main/Vxware-Bedwars.lua")() -- Credis to Vxalware
     elseif selectedOption == "AuroraGPT" then
-        loadstring("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua")()
+        loadstring("https://raw.githubusercontent.com/cocotv666/Aurora/main/Aurora_Loader")()
     elseif selectedOption == "Voidpaste" then
         loadstring("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua")()
     end
