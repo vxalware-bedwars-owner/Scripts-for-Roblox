@@ -1,5 +1,5 @@
 local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
-local win = DiscordLib:Window("CodeCacheV2 Re-made by SynthX, A Nerd, and Vxalware")
+local win = DiscordLib:Window("CodeCacheV2 Re-made by SynthX, A Nerd, Vxalware, and sstvskids") -- Credits to sstvskids for some script arrangement
 local serv = win:Server("Game Scripts", "http://www.roblox.com/asset/?id=6031075938")
 
 local drops = serv:Channel("A Game Scripts")
@@ -18,6 +18,24 @@ local drop = drops:Dropdown("Blox Fruits 🍎", {"Redz Hub", "Speed Hub X", "Knc
         loadstring("https://scripts.alchemyhub.xyz")()
     elseif selectedOption == "Ronix Hub" then
         loadstring("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua")()
+    end
+    print("You selected: " .. selectedOption)
+end)
+
+local drop = drops:Dropdown("Bedwars 🛏️", {"Vape V4", "Night", "AlSploit", "Vxalware", "AuroraGPT", "Voidpaste"}, function(selectedOption)
+    
+    if selectedOption == "Vape V4" then
+        loadstring("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua")() -- Trying out skidvape4roblox
+    elseif selectedOption == "Night" then
+        loadstring("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua")()
+    elseif selectedOption == "AlSploit" then
+        loadstring("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/sources/BloxFruit.lua")()
+    elseif selectedOption == "Vxalware" then
+        loadstring("https://raw.githubusercontent.com/vxalware-bedwars-owner/Vxalware-Rewrite/refs/heads/main/Vxware-Bedwars.lua")() -- Credis to Vxalware
+    elseif selectedOption == "AuroraGPT" then
+        loadstring("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua")()
+    elseif selectedOption == "Voidpaste" then
+        loadstring("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua")()
     end
     print("You selected: " .. selectedOption)
 end)
