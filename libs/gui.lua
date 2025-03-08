@@ -83,7 +83,7 @@ end
 
 local Discord = Instance.new("ScreenGui")
 Discord.Name = "Discord"
-Discord.Parent = gethui() or game.CoreGui or game.PlayerGui
+Discord.Parent = game.CoreGui or game.PlayerGui
 Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 function DiscordLib:Window(text)
