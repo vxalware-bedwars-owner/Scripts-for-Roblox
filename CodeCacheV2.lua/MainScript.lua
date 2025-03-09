@@ -27,7 +27,7 @@ local drop = drops:Dropdown("Bedwars 🛏️", {"Vape V4", "Night", "AlSploit", 
     if selectedOption == "Vape V4" then
         loadstring("https://raw.githubusercontent.com/sstvskids/VapeV4ForRoblox/main/NewMainScript.lua")() -- Trying out skidvape4roblox
     elseif selectedOption == "Night" then
-        loadstring("https://raw.githubusercontent.com/warprbx/NightRewrite/refs/heads/main/Night/Loader.luau")()
+        print("Executed")
     elseif selectedOption == "AlSploit" then
         loadstring("https://dpaste.com/BQ7GD3DD2.txt")()
     elseif selectedOption == "Vxalware" then
