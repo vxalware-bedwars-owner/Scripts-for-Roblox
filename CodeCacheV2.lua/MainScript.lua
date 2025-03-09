@@ -11,9 +11,9 @@ local drop = drops:Dropdown("Blox Fruits 🍎", {"Redz Hub", "Speed Hub X", "Knc
     if selectedOption == "Redz Hub" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
     elseif selectedOption == "Speed Hub X" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
     elseif selectedOption == "Kncrypt Hub" then
-        loadstring("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/sources/BloxFruit.lua")()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/sources/BloxFruit.lua"))()
     elseif selectedOption == "Alchemy Hub" then
         loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))()
     elseif selectedOption == "Ronix Hub" then
@@ -25,17 +25,17 @@ end)
 local drop = drops:Dropdown("Bedwars 🛏️", {"Vape V4", "Night", "AlSploit", "Vxalware", "AuroraGPT", "Voidpaste"}, function(selectedOption)
     
     if selectedOption == "Vape V4" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/main/NewMainScript.lua"))()
     elseif selectedOption == "Night" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/warprbx/NightRewrite/refs/heads/main/Night/Loader.luau"))()
     elseif selectedOption == "AlSploit" then
-        loadstring(game:HttpGet("https://dpaste.com/BQ7GD3DD2.txt")()
+        loadstring(game:HttpGet("https://dpaste.com/BQ7GD3DD2.txt"))()
     elseif selectedOption == "Vxalware" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Vxalware-Rewrite/refs/heads/main/Vxware-Bedwars.lua")() -- Credis to Vxalware
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Vxalware-Rewrite/refs/heads/main/Vxware-Bedwars.lua"))() -- Credits to Vxalware
     elseif selectedOption == "AuroraGPT" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/Aurora/main/Aurora_Loader")()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/Aurora/main/Aurora_Loader"))()
     elseif selectedOption == "Voidpaste" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua")()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua"))()
     end
     print("You selected: " .. selectedOption)
 end)
