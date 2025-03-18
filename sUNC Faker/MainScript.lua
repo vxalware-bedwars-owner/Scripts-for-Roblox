@@ -1,118 +1,221 @@
-print("Only needing wait functions and emojis to other parts of the code")
-local everything = {
-    "Loading...",
-    "Grabbing executor name...",
-    "Starting sUNC test. Join our Discord server if you want :) [discord.gg/rx4nbdQPx6]",
-    "❗️ Starting basic loadstring testing",
-    "❗️ Finished basic loadstring testing",
-    "❗️ Starting simple loadstring URL testing...",
-    "✅ Passed the simple loadstring test. Short obfuscated scripts can be executed.",
-    "❗️ Finished simple loadstring URL testing",
-    "❗️ Starting complicated loadstring URL testing...",
-    "❗️ Finished complicated loadstring URL testing",
-    "loadstring[complicated] true",
-    "loadstring[simple] true",
-    "loadstring[basic] true",
-    "Interesting",
-    " ",
-    "\n\n\n",
-    "â Drawing.Fonts",
-    "â Drawing.new",
-    "â WebSocket.connect",
-    "â appendfile",
-    "â base64_decode",
-    "â base64_encode",
-    "â cache.invalidate",
-    "â cache.iscached",
-    "â cache.replace",
-    "â checkcaller",
-    "â cleardrawcache",
-    "â clonefunction",
-    "â cloneref",
-    "â compareinstances",
-    "â crypt.decrypt",
-    "â crypt.encrypt",
-    "â crypt.generatebytes",
-    "â crypt.generatekey",
-    "â crypt.hash",
-    "â debug.getconstant",
-    "â debug.getconstants",
-    "â debug.getinfo",
-    "â debug.getproto",
-    "â debug.getprotos",
-    "â debug.getupvalue",
-    "â debug.getupvalues",
-    "â debug.setconstant",
-    "â debug.setstack",
-    "â debug.setupvalue",
-    "â decompile",
-    "â delfile",
-    "â delfolder",
-    "â fireclickdetector",
-    "â fireproximityprompt",
-    "â firesignal",
-    "â firetouchinterest",
-    "â getcallbackvalue",
-    "â getcallingscript",
-    "â getconnections",
-    "â getcustomasset",
-    "â getgc",
-    "â getgenv_access",
-    "â gethiddenproperty",
-    "â gethui",
-    "â getinstances",
-    "â getloadedmodules",
-    "â getnamecallmethod",
-    "â getnilinstances",
-    "â getrawmetatable",
-    "â getrenderproperty",
-    "â getrenv",
-    "â getrunningscripts",
-    "â getscriptbytecode",
-    "â getscriptclosure",
-    "â getscripts",
-    "â getsenv",
-    "â getthreadidentity",
-    "â hookfunction",
-    "â hookmetamethod",
-    "â identifyexecutor",
-    "â iscclosure",
-    "â isexecutorclosure",
-    "â isfile",
-    "â isfolder",
-    "â islclosure",
-    "â isrbxactive",
-    "â isreadonly",
-    "â isrenderobj",
-    "â isscriptable",
-    "â listfiles",
-    "â loadfile",
-    "â loadstring",
-    "â lz4decompress",
-    "â lz4compress",
-    "â makefolder",
-    "â newcclosure",
-    "â readfile",
-    "â request",
-    "â restorefunction",
-    "â sethiddenproperty",
-    "â setrawmetatable",
-    "â setreadonly",
-    "â setrenderproperty",
-    "â setscriptable",
-    "â setthreadidentity",
-    "â writefile",
-    " ",
-    "ðPassed the test with 99% success rate (86 out of 87)",
-    "â Total tests failed: 0",
-    "ðThis test was made by senS (fuck all inco pastes, unc fakers)",
-    "Finished the test in " .. math.random(17.3, 38.2) .. " seconds",
-    " ",
-    "sUNC, VERSION 1.51 n?Ã¿rn?z|v{nv{??qrÃ¶{v{Âvy",
-    "Contributors: vvultt, GRH, 0_void, Dottik, Pixeluted, bytevector(🍓­), s.irius, citam."
-}
+print("Loading...")
+print("Grabbing executor name...")
+print("Starting sUNC test. Join our Discord server if you want :) [discord.gg/rx4nbdQPx6]")
+task.wait(5) -- Function for identifies
 
-for i, v in next, everything do
-    print(tostring(v))
-    task.wait()
-end
+print("❗️ Starting basic loadstring testing")
+task.wait(2) -- Processing
+
+print("❗️ Finished basic loadstring testing")
+
+print("❗️ Starting simple loadstring URL testing...")
+task.wait(2) -- Processing
+
+print("✅ Passed the simple loadstring test. Short obfuscated scripts can be executed.")
+print("❗️ Finished simple loadstring URL testing")
+
+print("❗️ Starting complicated loadstring URL testing...")
+task.wait(2) -- Processing
+
+print("❗️ Finished complicated loadstring URL testing")
+task.wait(1) -- idrk
+
+print("loadstring[complicated] true")
+task.wait(0.01)
+print("loadstring[simple] true")
+task.wait(0.01)
+print("loadstring[basic] true")
+task.wait(0.01)
+print("Interesting")
+task.wait(2) -- For good measures
+
+print("\n\n\n")
+task.wait(0.01)
+print("✅ Drawing.Fonts")
+task.wait(0.01)
+print("✅ Drawing.new")
+task.wait(0.01)
+print("✅ WebSocket.connect")
+task.wait(0.01)
+print("✅ appendfile")
+task.wait(0.01)
+print("✅ base64_decode")
+task.wait(0.01)
+print("✅ base64_encode")
+task.wait(0.01)
+print("✅ cache.invalidate")
+task.wait(0.01)
+print("✅ cache.iscached")
+task.wait(0.01)
+print("✅ cache.replace")
+task.wait(0.01)
+print("✅ checkcaller")
+task.wait(0.01)
+print("✅ cleardrawcache")
+task.wait(0.01)
+print("✅ clonefunction")
+task.wait(0.01)
+print("✅ cloneref")
+task.wait(0.01)
+print("✅ compareinstances")
+task.wait(0.01)
+print("✅ crypt.decrypt")
+task.wait(0.01)
+print("✅ crypt.encrypt")
+task.wait(0.01)
+print("✅ crypt.generatebytes")
+task.wait(0.01)
+print("✅ crypt.generatekey")
+task.wait(0.01)
+print("✅ crypt.hash")
+task.wait(0.01)
+print("✅ debug.getconstant")
+task.wait(0.01)
+print("✅ debug.getconstants")
+task.wait(0.01)
+print("✅ debug.getinfo")
+task.wait(0.01)
+print("✅ debug.getproto")
+task.wait(0.01)
+print("✅ debug.getprotos")
+task.wait(0.01)
+print("✅ debug.getupvalue")
+task.wait(0.01)
+print("✅ debug.getupvalues")
+task.wait(0.01)
+print("✅ debug.setconstant")
+task.wait(0.01)
+print("✅ debug.setstack")
+task.wait(0.01)
+print("✅ debug.setupvalue")
+task.wait(0.01)
+print("❌ decompile")
+task.wait(0.01)
+print("✅ delfile")
+task.wait(0.01)
+print("✅ delfolder")
+task.wait(0.01)
+print("✅ fireclickdetector")
+task.wait(0.01)
+print("✅ fireproximityprompt")
+task.wait(0.01)
+print("✅ firesignal")
+task.wait(0.01)
+print("✅ firetouchinterest")
+task.wait(0.01)
+print("✅ getcallbackvalue")
+task.wait(0.01)
+print("✅ getcallingscript")
+task.wait(0.01)
+print("✅ getconnections")
+task.wait(0.01)
+print("✅ getcustomasset")
+task.wait(0.01)
+print("✅ getgc")
+task.wait(0.01)
+print("✅ getgenv_access")
+task.wait(0.01)
+print("✅ gethiddenproperty")
+task.wait(0.01)
+print("✅ gethui")
+task.wait(0.01)
+print("✅ getinstances")
+task.wait(0.01)
+print("✅ getloadedmodules")
+task.wait(0.01)
+print("✅ getnamecallmethod")
+task.wait(0.01)
+print("✅ getnilinstances")
+task.wait(0.01)
+print("✅ getrawmetatable")
+task.wait(0.01)
+print("✅ getrenderproperty")
+task.wait(0.01)
+print("✅ getrenv")
+task.wait(0.01)
+print("✅ getrunningscripts")
+task.wait(0.01)
+print("✅ getscriptbytecode")
+task.wait(0.01)
+print("✅ getscriptclosure")
+task.wait(0.01)
+print("✅ getscripts")
+task.wait(0.01)
+print("✅ getsenv")
+task.wait(0.01)
+print("✅ getthreadidentity")
+task.wait(0.01)
+print("✅ hookfunction")
+task.wait(0.01)
+print("✅ hookmetamethod")
+task.wait(0.01)
+print("✅ identifyexecutor")
+task.wait(0.01)
+print("✅ iscclosure")
+task.wait(0.01)
+print("✅ isexecutorclosure")
+task.wait(0.01)
+print("✅ isfile")
+task.wait(0.01)
+print("✅ isfolder")
+task.wait(0.01)
+print("✅ islclosure")
+task.wait(0.01)
+print("✅ isrbxactive")
+task.wait(0.01)
+print("✅ isreadonly")
+task.wait(0.01)
+print("✅ isrenderobj")
+task.wait(0.01)
+print("✅ isscriptable")
+task.wait(0.01)
+print("✅ listfiles")
+task.wait(0.01)
+print("✅ loadfile")
+task.wait(0.01)
+print("✅ loadstring")
+task.wait(0.01)
+print("✅ lz4decompress")
+task.wait(0.01)
+print("✅ lz4compress")
+task.wait(0.01)
+print("✅ makefolder")
+task.wait(0.01)
+print("✅ newcclosure")
+task.wait(0.01)
+print("✅ readfile")
+task.wait(0.01)
+print("✅ request")
+task.wait(0.01)
+print("✅ restorefunction")
+task.wait(0.01)
+print("✅ sethiddenproperty")
+task.wait(0.01)
+print("✅ setrawmetatable")
+task.wait(0.01)
+print("✅ setreadonly")
+task.wait(0.01)
+print("✅ setrenderproperty")
+task.wait(0.01)
+print("✅ setscriptable")
+task.wait(0.01)
+print("✅ setthreadidentity")
+task.wait(0.01)
+print("✅ writefile")
+task.wait(0.5)
+
+print("\n")
+task.wait(0.01)
+print("😎 Passed the test with 99% success rate (86 out of 87)")
+task.wait(0.01)
+print("❌ Total tests failed: 1")
+task.wait(0.01)
+print("😏 This test was made by senS (fuck all inco pastes, unc fakers)")
+task.wait(0.01)
+print("Finished the test in " .. math.random(17.3, 38.2) .. " seconds")
+task.wait(0.01)
+print(" ")
+task.wait(0.01)
+print("sUNC, VERSION 1.51 n?Ã¿rn?z|v{nv{??qrÃ¶{v{Âvy")
+task.wait(0.01)
+print("Contributors: vvultt, GRH, 0_void, Dottik, Pixeluted, bytevector(🍓­), s.irius, citam.")
