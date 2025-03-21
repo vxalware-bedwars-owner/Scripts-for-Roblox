@@ -1,4 +1,4 @@
--->> Adding Scaffold, CFrame Speed bypass, New method of inf fly requiring 1 block, and Creating seperate Extension <<--
+-->> Adding Scaffold, CFrame Speed bypass, New method of inf fly, and a health display <<--
 -- Night Extension for stuff
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20Modify/Night%20Extension.lua"))()
 
