@@ -1,8 +1,8 @@
 -->> Adding Scaffold, CFrame Speed bypass, New method of inf fly requiring 1 block, and Creating seperate Extension <<--
 -- Night Script loader
 loadstring(game:HttpGet("https://raw.githubusercontent.com/warprbx/NightRewrite/refs/heads/main/Night/Loader.luau"))()
--- Vxalware Extension for stuff
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Vxalware-Rewrite/refs/heads/main/Assets/Vxalware%20Extension.lua"))()
+-- Night Extension for stuff
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20Modify/Night%20Extension.lua"))()
 -- Antivoid (MADE BY ME NO SKIDDING PLZ !!1!1)
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
