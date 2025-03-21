@@ -58,7 +58,7 @@ local Button = MainTab:CreateButton({
    Callback = function()
 
 loadstring(game:HttpGet("https://pastebin.com/raw/N0t1z4pT"))()
-   end,https://pastebin.com/
+   end,
 })
 
 local Button = MainTab:CreateButton({
