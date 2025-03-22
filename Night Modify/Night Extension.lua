@@ -67,7 +67,7 @@ local Toggle = MainTab:CreateToggle({
    Flag = "Antivoid",
    Callback = function(Value)
    
-loadstring(game:HttpGet('https://pastebin.com/raw/ruSLtHF3'))()
+loadstring(game:HttpGet('https://pastebin.com/raw/e2yz7wRy'))()
    end,
 })
 
@@ -123,6 +123,6 @@ local Toggle = MainTab:CreateToggle({
    Flag = "Nofall",
    Callback = function(Value)
    
-loadstring(game:HttpGet('https://pastebin.com/raw/uvBGvDXB'))()
+loadstring(game:HttpGet('https://pastebin.com/raw/3RBRiwdd'))()
    end,
 })
