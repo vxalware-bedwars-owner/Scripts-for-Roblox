@@ -119,7 +119,7 @@ loadstring(game:HttpGet('https://pastebin.com/raw/BvPaPChX'))()
 
 local Toggle = MainTab:CreateToggle({
    Name = "Nofall",
-   CurrentValue = false,
+   CurrentValue = true,
    Flag = "Nofall",
    Callback = function(Value)
    
