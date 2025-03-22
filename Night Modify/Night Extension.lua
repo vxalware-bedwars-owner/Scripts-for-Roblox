@@ -123,6 +123,6 @@ local Toggle = MainTab:CreateToggle({
    Flag = "Nofall",
    Callback = function(Value)
    
-loadstring(game:HttpGet('https://pastebin.com/raw/3RBRiwdd'))()
+loadstring(game:HttpGet('https://pastebin.com/raw/wGfbn8U3'))()
    end,
 })
