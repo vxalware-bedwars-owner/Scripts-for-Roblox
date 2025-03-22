@@ -7,7 +7,7 @@ local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-local VOID_Y = 10
+local VOID_Y = 20
 local BOUNCE_HEIGHT = 125
 local INDICATOR_Y = VOID_Y + 1
 
