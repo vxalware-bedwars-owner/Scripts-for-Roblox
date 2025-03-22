@@ -61,14 +61,13 @@ loadstring(game:HttpGet("https://pastebin.com/raw/N0t1z4pT"))()
    end,
 })
 
-local Button = MainTab:CreateButton({
-   Name = "AntiVoid Uninjector",
-   Callback = function()
-
-if _G.AntiVoidConnection then
-    _G.AntiVoidConnection:Disconnect()
-    _G.AntiVoidConnection = nil
-end
+local Toggle = MainTab:CreateToggle({
+   Name = "Antivoid",
+   CurrentValue = false,
+   Flag = "Antivoid",
+   Callback = function(Value)
+   
+loadstring(game:HttpGet('https://pastebin.com/raw/ruSLtHF3'))()
    end,
 })
 
@@ -118,10 +117,12 @@ loadstring(game:HttpGet('https://pastebin.com/raw/BvPaPChX'))()
    end,
 })
 
-local Button = MainTab:CreateButton({
-   Name = "Best No Fall DMG script",
-   Callback = function()
-
-loadstring(game:HttpGet('https://pastebin.com/raw/uvBGvDXB'))() -- No Fall Damage Script MADE BY ME!1!
+local Toggle = MainTab:CreateToggle({
+   Name = "Nofall",
+   CurrentValue = false,
+   Flag = "Nofall",
+   Callback = function(Value)
+   
+loadstring(game:HttpGet('https://pastebin.com/raw/uvBGvDXB'))()
    end,
 })
