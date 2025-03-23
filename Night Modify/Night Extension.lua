@@ -63,11 +63,11 @@ loadstring(game:HttpGet("https://pastebin.com/raw/N0t1z4pT"))()
 
 local Toggle = MainTab:CreateToggle({
    Name = "Antivoid",
-   CurrentValue = true,
+   CurrentValue = false,
    Flag = "Antivoid",
    Callback = function(Value)
 
-print("AntiVoid executed")
+loadstring(game:HttpGet("https://pastebin.com/raw/ruSLtHF3",true))()
    end,
 })
 
@@ -119,10 +119,10 @@ loadstring(game:HttpGet('https://pastebin.com/raw/BvPaPChX'))()
 
 local Toggle = MainTab:CreateToggle({
    Name = "Nofall",
-   CurrentValue = true,
+   CurrentValue = false,
    Flag = "Nofall",
    Callback = function(Value)
 
-print("NoFall executed")
+loadstring(game:HttpGet("https://pastebin.com/raw/uvBGvDXB",true))()
    end,
 })
