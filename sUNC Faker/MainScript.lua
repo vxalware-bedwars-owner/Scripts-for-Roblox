@@ -11,17 +11,17 @@ task.wait(0.5) -- Ensuring
 print("❗️ Starting basic loadstring testing")
 task.wait(2) -- Processing
 print("❗️ Finished basic loadstring testing")
-task.wait(0.8) -- Checking
+task.wait(2) -- Checking
 print("❗️ Starting simple loadstring URL testing...")
 task.wait(2) -- Processing
 print("✅ Passed the simple loadstring test. Short obfuscated scripts can be executed.")
-task.wait(0.5) -- Checking for 'fakes'
+task.wait(2) -- Checking for 'fakes'
 print("❗️ Finished simple loadstring URL testing")
-task.wait(1) -- Checking
+task.wait(2) -- Checking
 print("❗️ Starting complicated loadstring URL testing...")
 task.wait(2) -- Processing
 print("❗️ Finished complicated loadstring URL testing")
-task.wait(1.1) -- idrk
+task.wait(2) -- idrk
 
 print("loadstring[complicated] true")
 task.wait(0.01)
@@ -210,7 +210,7 @@ print("✅ writefile")
 task.wait(0.01)
 
 print("\n")
-print("😎Passed the test with 99% success rate (86 out of 87)")
+print("😎 Passed the test with 99% success rate (86 out of 87)")
 print("❌ Total tests failed: 1")
 print("😏 This test was made by senS (fuck all inco pastes, unc fakers)")
 print("Finished the test in " .. math.random(17.3, 38.2) .. " seconds")
