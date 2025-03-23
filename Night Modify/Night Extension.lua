@@ -66,14 +66,8 @@ local Toggle = MainTab:CreateToggle({
    CurrentValue = true,
    Flag = "Antivoid",
    Callback = function(Value)
-   
-getgenv().executionCount = (getgenv().executionCount or 0) + 1
 
-if getgenv().executionCount % 2 == 1 then
-    print("Injected")
-else
-    print("Uninjected")
-end
+print("AntiVoid executed")
    end,
 })
 
@@ -129,12 +123,6 @@ local Toggle = MainTab:CreateToggle({
    Flag = "Nofall",
    Callback = function(Value)
 
-getgenv().executionCount = (getgenv().executionCount or 0) + 1
-
-if getgenv().executionCount % 2 == 1 then
-    print("Injected")
-else
-    print("Uninjected")
-end
+print("NoFall executed")
    end,
 })
