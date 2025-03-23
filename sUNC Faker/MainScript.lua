@@ -1,29 +1,27 @@
 print("Loading...")
 print("Grabbing executor name...")
 print("Starting sUNC test. Join our Discord server if you want :) [discord.gg/rx4nbdQPx6]")
-task.wait(5) -- Function for identifies
+task.wait(5) -- For 4 function tests :)
 
 print("✅ debug.setupvalue")
 print("✅ debug.setconstant")
 print("✅ gethiddenproperty")
 print("✅ sethiddenproperty")
-task.wait(1)
+task.wait(0.5) -- Ensuring
 print("❗️ Starting basic loadstring testing")
 task.wait(2) -- Processing
-
 print("❗️ Finished basic loadstring testing")
-
+task.wait(0.8) -- Checking
 print("❗️ Starting simple loadstring URL testing...")
 task.wait(2) -- Processing
-
 print("✅ Passed the simple loadstring test. Short obfuscated scripts can be executed.")
+task.wait(0.5) -- Checking for 'fakes'
 print("❗️ Finished simple loadstring URL testing")
-
+task.wait(1) -- Checking
 print("❗️ Starting complicated loadstring URL testing...")
 task.wait(2) -- Processing
-
 print("❗️ Finished complicated loadstring URL testing")
-task.wait(1) -- idrk
+task.wait(1.5) -- idrk
 
 print("loadstring[complicated] true")
 task.wait(0.01)
@@ -32,7 +30,7 @@ task.wait(0.01)
 print("loadstring[basic] true")
 task.wait(0.01)
 print("Interesting")
-task.wait(2) -- For good measures
+task.wait(1.5) -- For good measures
 print("✅ getcallbackvalue")
 print("❌ decompile")
 task.wait(1)
