@@ -67,7 +67,13 @@ local Toggle = MainTab:CreateToggle({
    Flag = "Antivoid",
    Callback = function(Value)
    
-loadstring(game:HttpGet('https://pastebin.com/raw/spkhZwBT'))()
+getgenv().executionCount = (getgenv().executionCount or 0) + 1
+
+if getgenv().executionCount % 2 == 1 then
+    print("Injected")
+else
+    print("Uninjected")
+end
    end,
 })
 
@@ -122,7 +128,13 @@ local Toggle = MainTab:CreateToggle({
    CurrentValue = true,
    Flag = "Nofall",
    Callback = function(Value)
-   
-loadstring(game:HttpGet('https://pastebin.com/raw/grH7cLrg'))()
+
+getgenv().executionCount = (getgenv().executionCount or 0) + 1
+
+if getgenv().executionCount % 2 == 1 then
+    print("Injected")
+else
+    print("Uninjected")
+end
    end,
 })
