@@ -126,3 +126,13 @@ local Toggle = MainTab:CreateToggle({
 loadstring(game:HttpGet("https://pastebin.com/raw/uvBGvDXB",true))()
    end,
 })
+
+local Toggle = MainTab:CreateToggle({
+   Name = "Scaffold - X",
+   CurrentValue = false,
+   Flag = "Scaffold",
+   Callback = function(Value)
+
+loadstring(game:HttpGet("https://pastebin.com/raw/jT2Enq7V",true))()
+   end,
+})
