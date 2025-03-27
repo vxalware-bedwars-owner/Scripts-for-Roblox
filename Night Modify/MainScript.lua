@@ -1,4 +1,3 @@
---[[
 -->> Adding CFrame Speed bypass, New method of inf fly, and a health display <<--
 
 local UserInputService = game:GetService("UserInputService")
@@ -16,4 +15,3 @@ else
     -- Night Script loader
     loadstring(game:HttpGet("https://raw.githubusercontent.com/warprbx/NightRewrite/refs/heads/main/Night/Loader.luau"))()
 end
-]]
