@@ -54,7 +54,7 @@ local function createGui(text)
 end
 
 -- Show "Loading Vxalware..."
-local loadingGui = createGui("Loading Vxalware...")
+local loadingGui = createGui("Loading Night VX...")
 task.wait(1.9)
 loadingGui:Destroy()
 
@@ -71,6 +71,6 @@ local endTime = tick()
 local totalTime = math.floor(endTime - startTime)
 
 -- Show "Finished loading Vxalware! Took: X seconds"
-local finishedGui = createGui("Finished loading Vxalware! Took: " .. totalTime .. " seconds")
+local finishedGui = createGui("Finished loading Night VX! Took: " .. totalTime .. " seconds")
 task.wait(2)
 finishedGui:Destroy()
