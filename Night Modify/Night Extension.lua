@@ -61,16 +61,6 @@ loadstring(game:HttpGet("https://pastebin.com/raw/N0t1z4pT"))()
    end,
 })
 
-local Toggle = MainTab:CreateToggle({
-   Name = "Antivoid",
-   CurrentValue = false,
-   Flag = "Antivoid",
-   Callback = function(Value)
-
-loadstring(game:HttpGet("https://pastebin.com/raw/ruSLtHF3",true))()
-   end,
-})
-
 local MainTab = Window:CreateTab("🌏 Universal GUIs", nil)
 local MainSection = MainTab:CreateSection("Universal GUIs")
 
@@ -102,7 +92,7 @@ local MainTab = Window:CreateTab("⚔️ Other stuff", nil)
 local MainSection = MainTab:CreateSection("Other stuff")
 
 local Button = MainTab:CreateButton({
-   Name = "Sword Texture",
+   Name = "Pink Sword Texture",
    Callback = function()
 
 loadstring(game:HttpGet("https://pastebin.com/raw/fdmZVrFF"))()
@@ -114,25 +104,5 @@ local Button = MainTab:CreateButton({
    Callback = function()
 
 loadstring(game:HttpGet('https://pastebin.com/raw/BvPaPChX'))()
-   end,
-})
-
-local Toggle = MainTab:CreateToggle({
-   Name = "Nofall",
-   CurrentValue = false,
-   Flag = "Nofall",
-   Callback = function(Value)
-
-loadstring(game:HttpGet("https://pastebin.com/raw/uvBGvDXB",true))()
-   end,
-})
-
-local Toggle = MainTab:CreateToggle({
-   Name = "Scaffold - X",
-   CurrentValue = false,
-   Flag = "Scaffold",
-   Callback = function(Value)
-
-loadstring(game:HttpGet("https://pastebin.com/raw/jT2Enq7V",true))()
    end,
 })
