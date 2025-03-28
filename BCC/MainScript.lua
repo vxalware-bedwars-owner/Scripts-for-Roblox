@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/jensonhirst/Orion/main/source'))()
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/BCC/Others/Orion%20src.lua'))()
 local Window = OrionLib:MakeWindow({
     Name = "Bedwars Closet Cheat", 
     HidePremium = false, 
@@ -25,14 +25,14 @@ ClosetTab:AddToggle({
         if getgenv().InjectionCounter1 % 2 == 1 then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/AimAssist.lua", true))()
         else
-            if getgenv().loop then
-                getgenv().loop:Disconnect()
-                getgenv().loop = nil
+            if loop then
+                loop:Disconnect()
+                loop = nil
             end
             
-            if getgenv().FOVring then
-                getgenv().FOVring:Remove()
-                getgenv().FOVring = nil
+            if FOVring then
+                FOVring:Remove()
+                FOVring = nil
             end
             
             print("Aimbot script successfully uninjected.")
