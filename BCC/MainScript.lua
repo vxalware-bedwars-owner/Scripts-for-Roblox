@@ -2,7 +2,7 @@ local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/jens
 local Window = OrionLib:MakeWindow({
     Name = "Bedwars Closet Cheat", 
     HidePremium = false, 
-    SaveConfig = true, 
+    SaveConfig = false, 
     ConfigFolder = "BCC", 
     IntroText = "BCC 4 Bedwars"
 })
