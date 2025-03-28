@@ -19,7 +19,24 @@ ClosetTab:AddToggle({
     Default = false,
     Callback = function(Value)
         print("AimAssist toggled:", Value)
-        -- Add your AimAssist functionality here
+        getgenv().InjectionCounter1 = getgenv().InjectionCounter1 or 0
+        getgenv().InjectionCounter1 = getgenv().InjectionCounter1 + 1
+        
+        if getgenv().InjectionCounter1 % 2 == 1 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/AimAssist.lua", true))()
+        else
+            if getgenv().loop then
+                getgenv().loop:Disconnect()
+                getgenv().loop = nil
+            end
+            
+            if getgenv().FOVring then
+                getgenv().FOVring:Remove()
+                getgenv().FOVring = nil
+            end
+            
+            print("Aimbot script successfully uninjected.")
+        end
     end    
 })
 
