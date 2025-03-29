@@ -1,3 +1,4 @@
+--> Going to add No Fall, Inf jump, Antivoid, and stuff <--
 getgenv().InjectionCounter1 = getgenv().InjectionCounter1 or 0
 getgenv().InjectionCounter1 = getgenv().InjectionCounter1 + 1
         
