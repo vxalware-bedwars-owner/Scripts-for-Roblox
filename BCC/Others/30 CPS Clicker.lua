@@ -63,7 +63,7 @@ end)
 
 -- Notification
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "X Key Autoclicker (30 CPS)",
-    Text = "Hold X to activate - Clicks at pointer",
+    Title = "30 CPS Autoclicker",
+    Text = "Hold X to activate",
     Duration = 5
 })
