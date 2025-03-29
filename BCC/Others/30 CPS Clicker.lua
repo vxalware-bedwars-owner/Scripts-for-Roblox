@@ -1,61 +1,69 @@
--- Roblox LocalScript for 30 CPS autoclicker (X key)
+-- X Key Autoclicker (30 CPS) - Position Aware
 local UserInputService = game:GetService("UserInputService")
-local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local Mouse = Players.LocalPlayer:GetMouse()
 
-local targetCPS = 30
-local clickDelay = 1 / targetCPS  -- ~0.0333 seconds between clicks
+local TARGET_CPS = 30
+local CLICK_DELAY = 1 / TARGET_CPS
 local isClicking = false
-local clickConnection
 
-local function simulateClick()
+local function clickAtPointer()
     if not isClicking then return end
     
-    -- Simulate mouse click
-    mouse1click()
+    -- Get precise mouse data
+    local target = Mouse.Target
+    local hitPosition = Mouse.Hit.Position
+    local viewportPoint = Vector2.new(Mouse.X, Mouse.Y)
     
-    -- Schedule next click
-    task.delay(clickDelay, simulateClick)
-end
-
-local function handleInput(input, gameProcessed)
-    if gameProcessed then return end
-    
-    if input.KeyCode == Enum.KeyCode.X then
-        if input.UserInputState == Enum.UserInputState.Begin then
-            -- Start clicking
-            isClicking = true
-            simulateClick()
+    -- Handle different clickable types
+    if target then
+        if target:IsA("BasePart") then
+            -- For 3D objects with ClickDetectors
+            local clickDetector = target:FindFirstChildOfClass("ClickDetector")
+            if clickDetector then
+                fireclickdetector(clickDetector, 0)
+            else
+                mouse1click()
+            end
+        elseif target:IsA("GuiObject") then
+            -- For GUI elements - click at center position
+            local absolutePos = target.AbsolutePosition
+            local absoluteSize = target.AbsoluteSize
+            local clickPos = Vector2.new(
+                absolutePos.X + absoluteSize.X/2,
+                absolutePos.Y + absoluteSize.Y/2
+            )
+            mousemoveabs(clickPos.X, clickPos.Y)
+            mouse1click()
         else
-            -- Stop clicking
-            isClicking = false
+            -- Default click behavior
+            mouse1click()
         end
     end
+    
+    -- Schedule next click
+    task.delay(CLICK_DELAY, clickAtPointer)
 end
 
--- Set up input listeners
-local beginConnection = UserInputService.InputBegan:Connect(handleInput)
-local endConnection = UserInputService.InputEnded:Connect(handleInput)
+-- Input handling
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+    if input.KeyCode == Enum.KeyCode.X then
+        isClicking = true
+        clickAtPointer()
+    end
+end)
 
--- Cleanup function
-local function cleanup()
-    isClicking = false
-    if beginConnection then
-        beginConnection:Disconnect()
+UserInputService.InputEnded:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+    if input.KeyCode == Enum.KeyCode.X then
+        isClicking = false
     end
-    if endConnection then
-        endConnection:Disconnect()
-    end
-    if clickConnection then
-        clickConnection:Disconnect()
-    end
-end
+end)
 
 -- Notification
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "30 CPS Autoclicker",
-    Text = "Hold X to activate",
+    Title = "X Key Autoclicker (30 CPS)",
+    Text = "Hold X to activate - Clicks at pointer",
     Duration = 5
 })
-
--- Automatic cleanup
-script.Destroying:Connect(cleanup)
