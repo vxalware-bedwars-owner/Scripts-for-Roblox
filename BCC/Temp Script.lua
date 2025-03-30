@@ -5,10 +5,7 @@ getgenv().InjectionCounter1 = getgenv().InjectionCounter1 + 1
 if getgenv().InjectionCounter1 % 2 == 1 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/AimAssist.lua", true))()
 else
-    if UserInputService:IsKeyDown(Enum.KeyCode.Delete) then
-        loop:Disconnect()
-        FOVring:Remove()
-    end
+    AimAssist.uninject()
 end
 print("Did Hacker thing 1")
 
