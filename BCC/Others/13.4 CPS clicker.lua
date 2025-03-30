@@ -1,26 +1,21 @@
--- Precise 13.4 CPS Autoclicker (R Key) - Position Aware
+-- 13.4 CPS Autoclicker (Toggle with R)
 local UserInputService = game:GetService("UserInputService")
 local Players = game:GetService("Players")
 local Mouse = Players.LocalPlayer:GetMouse()
 
 -- Configuration
 local TARGET_CPS = 13.4
-local CLICK_DELAY = 1 / TARGET_CPS  -- ~0.0746 second delay
-local isClicking = false
+local CLICK_DELAY = 1 / TARGET_CPS
+local isActive = false
 local clickConnection = nil
 
--- Precise click function
+-- Click function
 local function clickAtPointer()
-    if not isClicking then return end
+    if not isActive then return end
     
-    -- Get mouse data
     local target = Mouse.Target
-    local viewportPoint = Vector2.new(Mouse.X, Mouse.Y)
-    
-    -- Handle different target types
     if target then
         if target:IsA("BasePart") then
-            -- For 3D objects
             local clickDetector = target:FindFirstChildOfClass("ClickDetector")
             if clickDetector then
                 fireclickdetector(clickDetector, 0)
@@ -28,60 +23,59 @@ local function clickAtPointer()
                 mouse1click()
             end
         elseif target:IsA("GuiObject") then
-            -- For GUI elements
-            local centerX = target.AbsolutePosition.X + (target.AbsoluteSize.X/2)
-            local centerY = target.AbsolutePosition.Y + (target.AbsoluteSize.Y/2)
-            mousemoveabs(centerX, centerY)
+            local center = target.AbsolutePosition + (target.AbsoluteSize/2)
+            mousemoveabs(center.X, center.Y)
             mouse1click()
         else
             mouse1click()
         end
     end
     
-    -- Schedule next click with precise timing
-    if isClicking then
-        clickConnection = task.delay(CLICK_DELAY, clickAtPointer)
+    clickConnection = task.delay(CLICK_DELAY, clickAtPointer)
+end
+
+-- Toggle function
+local function toggleAutoclicker()
+    isActive = not isActive
+    
+    if isActive then
+        clickAtPointer()
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "13.4 CPS Autoclicker",
+            Text = "Activated (Press R again to stop)",
+            Duration = 3
+        })
+    else
+        if clickConnection then
+            task.cancel(clickConnection)
+        end
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "13.4 CPS Autoclicker",
+            Text = "Deactivated",
+            Duration = 2
+        })
     end
 end
 
 -- Input handling
-local function handleInput(input, gameProcessed)
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if gameProcessed then return end
-    
     if input.KeyCode == Enum.KeyCode.R then
-        if input.UserInputState == Enum.UserInputState.Begin then
-            -- Start clicking
-            isClicking = true
-            clickAtPointer()
-        else
-            -- Stop clicking
-            isClicking = false
-            if clickConnection then
-                task.cancel(clickConnection)
-                clickConnection = nil
-            end
-        end
+        toggleAutoclicker()
     end
-end
+end)
 
--- Set up event listeners
-UserInputService.InputBegan:Connect(handleInput)
-UserInputService.InputEnded:Connect(handleInput)
-
--- Cleanup function
-local function cleanup()
-    isClicking = false
+-- Cleanup
+script.Destroying:Connect(function()
+    isActive = false
     if clickConnection then
         task.cancel(clickConnection)
     end
-end
+end)
 
--- Notification
+-- Initial notification
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "13.4 CPS Autoclicker",
-    Text = "Hold R to activate - Clicks at pointer",
+    Title = "13.4 CPS Autoclicker Loaded",
+    Text = "Press R to toggle",
     Duration = 5
 })
-
--- Script cleanup
-script.Destroying:Connect(cleanup)
