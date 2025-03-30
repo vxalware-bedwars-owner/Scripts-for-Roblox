@@ -1,10 +1,10 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/BCC/Others/AimAssist.lua",true))() --  Aim Assist V1
 print("Did Hacker thing 1")
 
-loadstring(game:HttpGet("https://pastebin.com/raw/JSER1DXX",true))() -- No Fall Damage
+loadstring(game:HttpGet("https://pastebin.com/raw/esznFyu0",true))() -- No Fall Damage
 print("Did Hacker thing 2")
 
-loadstring(game:HttpGet("https://pastebin.com/raw/spkhZwBT",true))() -- AntiVoid
+loadstring(game:HttpGet("https://pastebin.com/raw/aQysPVxv",true))() -- AntiVoid
 print("Did Hacker thing 3")
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
