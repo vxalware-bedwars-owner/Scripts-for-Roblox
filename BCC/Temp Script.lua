@@ -7,30 +7,34 @@ getgenv().InjectionCounter1 = getgenv().InjectionCounter1 + 1
 if getgenv().InjectionCounter1 % 2 == 1 then
     -- Injection mode
     local success, result = pcall(function()
-        -- Load the aim assist module (replace with your actual raw URL)
-        local AimAssist = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/BCC/Others/AimAssist.lua", true))()
-        
+        -- Load aim assist
+        local AimAssist = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/AimAssist.lua", true))()
         getgenv().AimAssist = AimAssist
-        
         if AimAssist and not AimAssist.active then
             AimAssist.toggle(true)
         end
-        
-        return AimAssist
     end)
     
     if success then
         print("Aim Assist successfully injected")
     else
-        warn("Injection failed:", result)
+        warn("Aim Assist injection failed:", result)
     end
+
+    -- Load clickers (without making them uninjectable)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/13.4%20CPS%20clicker.lua", true))()
+    print("Did Hacker thing 2")
+    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/30%20CPS%20Clicker.lua", true))()
+    print("Did Hacker thing 3")
+
 else
-    -- Uninjection mode
+    -- Only uninject the aim assist (leave clickers running)
     if getgenv().AimAssist then
         if type(getgenv().AimAssist.uninject) == "function" then
             getgenv().AimAssist.uninject()
         else
-            -- Fallback cleanup if uninject doesn't exist
+            -- Fallback cleanup
             if getgenv().AimAssist.components then
                 if getgenv().AimAssist.components.loop then
                     getgenv().AimAssist.components.loop:Disconnect()
@@ -43,15 +47,9 @@ else
         getgenv().AimAssist = nil
         print("Did Hacker thing 1")
     else
-        warn("Failed to finished Hacker thing 1")
+        warn("No Aim Assist to uninject")
     end
 end
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/BCC/Others/13.4%20CPS%20clicker.lua",true))()
-print("Did Hacker thing 2")
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/BCC/Others/30%20CPS%20Clicker.lua",true))()
-print("Did Hacker thing 3")
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
