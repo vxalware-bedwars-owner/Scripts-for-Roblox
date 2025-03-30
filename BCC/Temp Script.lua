@@ -1,47 +1,11 @@
-getgenv().InjectionCounter1 = (getgenv().InjectionCounter1 or 0) + 1
+loadstring(game:HttpGet("https://github.com/vxalware-bedwars-owner/Scripts-for-Roblox/blob/main/BCC/Others/AimAssist.lua",true))() --  Aim Assist V1
+print("Did Hacker thing 1")
 
-if getgenv().InjectionCounter1 % 2 == 1 then
-    -- Injection mode
-    local success, result = pcall(function()
-        -- Load aim assist
-        local AimAssist = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/AimAssist.lua", true))()
-        getgenv().AimAssist = AimAssist
-        if AimAssist and not AimAssist.active then
-            AimAssist.toggle(true)
-        end
-    end)
-    
-    if not success then
-        warn("Aim Assist injection failed:", result)
-    end
+loadstring(game:HttpGet("https://pastebin.com/raw/JSER1DXX",true))() -- No Fall Damage
+print("Did Hacker thing 2")
 
-    -- Fixed string quote
-    loadstring(game:HttpGet("https://pastebin.com/raw/JSER1DXX",true))() -- No Fall Damage
-    print("Did Hacker thing 2")
-    loadstring(game:HttpGet("https://pastebin.com/raw/spkhZwBT",true))() -- AntiVoid
-    print("Did Hacker thing 3")
-else
-    -- Only uninject the aim assist (leave clickers running)
-    if getgenv().AimAssist then
-        if type(getgenv().AimAssist.uninject) == "function" then
-            getgenv().AimAssist.uninject()
-        else
-            -- Fallback cleanup
-            if getgenv().AimAssist.components then
-                if getgenv().AimAssist.components.loop then
-                    getgenv().AimAssist.components.loop:Disconnect()
-                end
-                if getgenv().AimAssist.components.FOVring then
-                    getgenv().AimAssist.components.FOVring:Destroy()
-                end
-            end
-        end
-        getgenv().AimAssist = nil
-        print("Did Hacker thing 1")
-    else
-        warn("No Aim Assist to uninject")
-    end
-end
+loadstring(game:HttpGet("https://pastebin.com/raw/spkhZwBT",true))() -- AntiVoid
+print("Did Hacker thing 3")
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
