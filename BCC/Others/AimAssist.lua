@@ -1,104 +1,63 @@
--- Store all script components in a table for easy cleanup
-local AimAssist = {
-    fov = 150,
-    smoothing = 1,
-    components = {},
-    active = true
-}
+local fov = 150
+local smoothing = 1
 
--- Initialize function
-local function initAimAssist()
-    -- Create FOV ring
-    AimAssist.components.FOVring = Drawing.new("Circle")
-    local FOVring = AimAssist.components.FOVring
-    FOVring.Visible = true
-    FOVring.Thickness = 1.5
-    FOVring.Radius = AimAssist.fov
-    FOVring.Transparency = 1
-    FOVring.Color = Color3.fromRGB(255, 128, 128)
-    FOVring.Position = workspace.CurrentCamera.ViewportSize/2
+local RunService = game:GetService("RunService")
 
-    -- Target finding function
-    local function getClosest(cframe)
-        local ray = Ray.new(cframe.Position, cframe.LookVector).Unit
-        local target, mag = nil, math.huge
-        
-        for _, v in pairs(game.Players:GetPlayers()) do
-            if v.Character and 
-               v.Character:FindFirstChild("Head") and 
-               v.Character:FindFirstChild("Humanoid") and 
-               v.Character:FindFirstChild("HumanoidRootPart") and 
-               v ~= game.Players.LocalPlayer and 
-               v.Team ~= game.Players.LocalPlayer.Team then
-                
-                local magBuf = (v.Character.Head.Position - ray:ClosestPoint(v.Character.Head.Position)).Magnitude
-                if magBuf < mag then
-                    mag = magBuf
-                    target = v
-                end
-            end
-        end
-        return target
-    end
+local FOVring = Drawing.new("Circle")
+FOVring.Visible = true
+FOVring.Thickness = 1.5
+FOVring.Radius = fov
+FOVring.Transparency = 1
+FOVring.Color = Color3.fromRGB(255, 128, 128)
+FOVring.Position = workspace.CurrentCamera.ViewportSize/2
 
-    -- Main loop
-    AimAssist.components.loop = game:GetService("RunService").RenderStepped:Connect(function()
-        if not AimAssist.active then return end
-        
-        local UserInputService = game:GetService("UserInputService")
-        local pressed = UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2)
-        local cam = workspace.CurrentCamera
-        local screenCenter = cam.ViewportSize / 2
-        
-        if pressed then
-            local curTar = getClosest(cam.CFrame)
-            if curTar and curTar.Character and curTar.Character:FindFirstChild("Head") then
-                local headPos, onScreen = cam:WorldToScreenPoint(curTar.Character.Head.Position)
-                local ssHeadPoint = Vector2.new(headPos.X, headPos.Y)
-                if onScreen and (ssHeadPoint - screenCenter).Magnitude < AimAssist.fov then
-                    cam.CFrame = cam.CFrame:Lerp(
-                        CFrame.new(cam.CFrame.Position, curTar.Character.Head.Position), 
-                        AimAssist.smoothing
-                    )
-                end
-            end
-        end
-    end)
+local function getClosest(cframe)
+   local ray = Ray.new(cframe.Position, cframe.LookVector).Unit
+   
+   local target = nil
+   local mag = math.huge
+   
+   for i,v in pairs(game.Players:GetPlayers()) do
+       if v.Character and v.Character:FindFirstChild("Head") and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v ~= game.Players.LocalPlayer then
+           -- Bedwars-specific enemy check
+           local bedwarsTeam = v:GetAttribute("Team") or v:FindFirstChild("Team")
+           local myTeam = game.Players.LocalPlayer:GetAttribute("Team") or game.Players.LocalPlayer:FindFirstChild("Team")
+           
+           if bedwarsTeam and myTeam and bedwarsTeam ~= myTeam then
+               local magBuf = (v.Character.Head.Position - ray:ClosestPoint(v.Character.Head.Position)).Magnitude
+               
+               if magBuf < mag then
+                   mag = magBuf
+                   target = v
+               end
+           end
+       end
+   end
+   
+   return target
 end
 
--- Uninject function
-function AimAssist.uninject()
-    if AimAssist.components.loop then
-        AimAssist.components.loop:Disconnect()
-    end
-    if AimAssist.components.FOVring then
-        AimAssist.components.FOVring:Remove()
-    end
-    AimAssist.active = false
-    warn("Aim assist successfully uninjected")
-end
-
--- Toggle function
-function AimAssist.toggle(state)
-    if state == nil then
-        state = not AimAssist.active
-    end
-    AimAssist.active = state
-    return AimAssist.active
-end
-
--- Initialize on load
-initAimAssist()
-
--- Example usage:
--- To uninject: AimAssist.uninject()
--- To toggle: AimAssist.toggle() or AimAssist.toggle(true/false)
-
--- Optional: Bind to Delete key
-game:GetService("UserInputService").InputBegan:Connect(function(input)
-    if input.KeyCode == Enum.KeyCode.Delete then
-        AimAssist.uninject()
-    end
+loop = RunService.RenderStepped:Connect(function()
+   local UserInputService = game:GetService("UserInputService")
+   local pressed = UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2)
+   local localPlay = game.Players.localPlayer.Character
+   local cam = workspace.CurrentCamera
+   local zz = workspace.CurrentCamera.ViewportSize/2
+   
+   if pressed then
+       local Line = Drawing.new("Line")
+       local curTar = getClosest(cam.CFrame)
+       if curTar and curTar.Character and curTar.Character:FindFirstChild("Head") then
+           local ssHeadPoint = cam:WorldToScreenPoint(curTar.Character.Head.Position)
+           ssHeadPoint = Vector2.new(ssHeadPoint.X, ssHeadPoint.Y)
+           if (ssHeadPoint - zz).Magnitude < fov then
+               workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame:Lerp(CFrame.new(cam.CFrame.Position, curTar.Character.Head.Position), smoothing)
+           end
+       end
+   end
+   
+   if UserInputService:IsKeyDown(Enum.KeyCode.Delete) then
+       loop:Disconnect()
+       FOVring:Remove()
+   end
 end)
-
-return AimAssist
