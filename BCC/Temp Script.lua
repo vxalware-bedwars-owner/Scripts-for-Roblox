@@ -16,18 +16,15 @@ if getgenv().InjectionCounter1 % 2 == 1 then
     end)
     
     if success then
-        print("Aim Assist successfully injected")
+        print("")
     else
         warn("Aim Assist injection failed:", result)
     end
 
-    -- Load clickers (without making them uninjectable)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/13.4%20CPS%20clicker.lua", true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/grH7cLrg",true))() -- No Fall Damage
     print("Did Hacker thing 2")
-    
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/30%20CPS%20Clicker.lua", true))()
-    print("Did Hacker thing 3")
-
+    loadstring(game:HttpGet("https://pastebin.com/raw/spkhZwBT",true))() -- AntiVoid
+    print("Did Hacker thing 3)
 else
     -- Only uninject the aim assist (leave clickers running)
     if getgenv().AimAssist then
@@ -160,4 +157,4 @@ loadstring(game:HttpGet('https://pastebin.com/raw/BvPaPChX'))()
    end,
 })
 print("Did Hacker thing 4")
-print("Injected")
+print("BCC Successful Inject")
