@@ -13,16 +13,43 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+Tab:AddToggle({
+	Name = "Toggle1",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	print("Toggle 1")
+	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Blatant",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
+Tab:AddToggle({
+	Name = "Toggle2",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	print("Toggle 2")
+	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Feature",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "Toggle3",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	print("Toggle 3")
+	end    
 })
 
 OrionLib:MakeNotification({
