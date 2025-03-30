@@ -1,53 +1,32 @@
--- Fixed injection counter logic
 getgenv().InjectionCounter1 = (getgenv().InjectionCounter1 or 0) + 1
-local RunService = game:GetService("RunService")
-local Players = game:GetService("Players")
-local lplr = Players.LocalPlayer
 
 if getgenv().InjectionCounter1 % 2 == 1 then
     -- Injection mode
-    print("Injecting features...")
-    
-    -- 1. Aim Assist Injection
     local success, result = pcall(function()
+        -- Load aim assist
         local AimAssist = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/AimAssist.lua", true))()
         getgenv().AimAssist = AimAssist
         if AimAssist and not AimAssist.active then
             AimAssist.toggle(true)
         end
     end)
-    if not success then warn("Aim Assist failed:", result) end
-
-    -- 2. No Fall Damage
-    getgenv().NoFallConnection = getgenv().NoFallConnection or nil
-    if getgenv().NoFallConnection then
-        getgenv().NoFallConnection:Disconnect()
-    end
-    getgenv().NoFallConnection = RunService.Heartbeat:Connect(function()
-        if lplr.Character and lplr.Character:FindFirstChild("HumanoidRootPart") then
-            local velocity = lplr.Character.HumanoidRootPart.Velocity
-            if velocity.Y < -70 then
-                lplr.Character.HumanoidRootPart.Velocity = Vector3.new(velocity.X, -10, velocity.Z)
-            end
-        end
-    end)
-    print("No Fall Damage enabled")
-
-    -- 3. AntiVoid
-    local antiVoidSuccess, antiVoidErr = pcall(function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/spkhZwBT",true))()
-    end)
-    if not antiVoidSuccess then warn("AntiVoid failed:", antiVoidErr) end
-
-else
-    -- Cleanup mode
-    print("Cleaning up injections...")
     
-    -- 1. Aim Assist Cleanup
+    if not success then
+        warn("Aim Assist injection failed:", result)
+    end
+
+    -- Fixed string quote
+    loadstring(game:HttpGet("https://pastebin.com/raw/JSER1DXX",true))() -- No Fall Damage
+    print("Did Hacker thing 2")
+    loadstring(game:HttpGet("https://pastebin.com/raw/spkhZwBT",true))() -- AntiVoid
+    print("Did Hacker thing 3")
+else
+    -- Only uninject the aim assist (leave clickers running)
     if getgenv().AimAssist then
         if type(getgenv().AimAssist.uninject) == "function" then
             getgenv().AimAssist.uninject()
         else
+            -- Fallback cleanup
             if getgenv().AimAssist.components then
                 if getgenv().AimAssist.components.loop then
                     getgenv().AimAssist.components.loop:Disconnect()
@@ -58,12 +37,9 @@ else
             end
         end
         getgenv().AimAssist = nil
-    end
-
-    -- 2. No Fall Damage Cleanup
-    if getgenv().NoFallConnection then
-        getgenv().NoFallConnection:Disconnect()
-        getgenv().NoFallConnection = nil
+        print("Did Hacker thing 1")
+    else
+        warn("No Aim Assist to uninject")
     end
 end
 
