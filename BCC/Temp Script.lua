@@ -1,13 +1,51 @@
 --> Going to add No Fall, Inf jump, Antivoid, and stuff <--
+local UserInputService = game:GetService("UserInputService")
+
 getgenv().InjectionCounter1 = getgenv().InjectionCounter1 or 0
 getgenv().InjectionCounter1 = getgenv().InjectionCounter1 + 1
-        
+
 if getgenv().InjectionCounter1 % 2 == 1 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/main/BCC/Others/AimAssist.lua", true))()
+    -- Injection mode
+    local success, result = pcall(function()
+        -- Load the aim assist module (replace with your actual raw URL)
+        local AimAssist = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/BCC/Others/AimAssist.lua", true))()
+        
+        getgenv().AimAssist = AimAssist
+        
+        if AimAssist and not AimAssist.active then
+            AimAssist.toggle(true)
+        end
+        
+        return AimAssist
+    end)
+    
+    if success then
+        print("Aim Assist successfully injected")
+    else
+        warn("Injection failed:", result)
+    end
 else
-    AimAssist.uninject()
+    -- Uninjection mode
+    if getgenv().AimAssist then
+        if type(getgenv().AimAssist.uninject) == "function" then
+            getgenv().AimAssist.uninject()
+        else
+            -- Fallback cleanup if uninject doesn't exist
+            if getgenv().AimAssist.components then
+                if getgenv().AimAssist.components.loop then
+                    getgenv().AimAssist.components.loop:Disconnect()
+                end
+                if getgenv().AimAssist.components.FOVring then
+                    getgenv().AimAssist.components.FOVring:Remove()
+                end
+            end
+        end
+        getgenv().AimAssist = nil
+        print("Did Hacker thing 1")
+    else
+        warn("Failed to finished Hacker thing 1")
+    end
 end
-print("Did Hacker thing 1")
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/BCC/Others/13.4%20CPS%20clicker.lua",true))()
 print("Did Hacker thing 2")
