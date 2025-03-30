@@ -17,7 +17,7 @@ if getgenv().InjectionCounter1 % 2 == 1 then
     end
 
     -- Fixed string quote
-    loadstring(game:HttpGet("https://pastebin.com/raw/grH7cLrg",true))() -- No Fall Damage
+    loadstring(game:HttpGet("https://pastebin.com/raw/JSER1DXX",true))() -- No Fall Damage
     print("Did Hacker thing 2")
     loadstring(game:HttpGet("https://pastebin.com/raw/spkhZwBT",true))() -- AntiVoid
     print("Did Hacker thing 3")
