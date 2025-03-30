@@ -1,8 +1,5 @@
---> Going to add No Fall, Inf jump, Antivoid, and stuff <--
-local UserInputService = game:GetService("UserInputService")
-
-getgenv().InjectionCounter1 = getgenv().InjectionCounter1 or 0
-getgenv().InjectionCounter1 = getgenv().InjectionCounter1 + 1
+-- Fixed injection counter logic
+getgenv().InjectionCounter1 = (getgenv().InjectionCounter1 or 0) + 1
 
 if getgenv().InjectionCounter1 % 2 == 1 then
     -- Injection mode
@@ -15,16 +12,15 @@ if getgenv().InjectionCounter1 % 2 == 1 then
         end
     end)
     
-    if success then
-        print("")
-    else
+    if not success then
         warn("Aim Assist injection failed:", result)
     end
 
+    -- Fixed string quote
     loadstring(game:HttpGet("https://pastebin.com/raw/grH7cLrg",true))() -- No Fall Damage
     print("Did Hacker thing 2")
     loadstring(game:HttpGet("https://pastebin.com/raw/spkhZwBT",true))() -- AntiVoid
-    print("Did Hacker thing 3)
+    print("Did Hacker thing 3")
 else
     -- Only uninject the aim assist (leave clickers running)
     if getgenv().AimAssist then
@@ -37,7 +33,7 @@ else
                     getgenv().AimAssist.components.loop:Disconnect()
                 end
                 if getgenv().AimAssist.components.FOVring then
-                    getgenv().AimAssist.components.FOVring:Remove()
+                    getgenv().AimAssist.components.FOVring:Destroy()
                 end
             end
         end
