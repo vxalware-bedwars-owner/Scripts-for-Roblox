@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://github.com/vxalware-bedwars-owner/Scripts-for-Roblox/blob/main/BCC/Others/AimAssist.lua",true))() --  Aim Assist V1
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/BCC/Others/AimAssist.lua",true))() --  Aim Assist V1
 print("Did Hacker thing 1")
 
 loadstring(game:HttpGet("https://pastebin.com/raw/JSER1DXX",true))() -- No Fall Damage
