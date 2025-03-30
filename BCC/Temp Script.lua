@@ -10,9 +10,9 @@ print("Did Hacker thing 3")
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "🌙Night Modified🌙",
+   Name = "BCC 4 Bedwars 😎",
    Icon = 0,
-   LoadingTitle = "Night Modified 🌙",
+   LoadingTitle = "Loading",
    LoadingSubtitle = "Made by A Nerd",
    Theme = "DarkBlue",
 
@@ -20,7 +20,7 @@ local Window = Rayfield:CreateWindow({
    DisableBuildWarnings = false,
 
    ConfigurationSaving = {
-      Enabled = False,
+      Enabled = false,
       FolderName = nil,
       FileName = "Vxalware"
    },
