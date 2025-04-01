@@ -5,7 +5,7 @@ print("❗ Make sure to join our Discord if you want: https://dsc.gg/vxalware")
 task.wait(5)
 warn("🚀 Testing all functions of the executor...")
 task.wait(3.5)
-print("\n\n\n")
+print("\n")
 
 -- Table to store test results
 local tests = {
