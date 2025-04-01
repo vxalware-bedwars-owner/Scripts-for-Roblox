@@ -3,29 +3,27 @@ task.wait(5)
 print("🚀 Starting xUNC Test!")
 print("❗ Make sure to join our Discord if you want: https://dsc.gg/vxalware")
 task.wait(5)
-warn("🚀 Testing all functions of the executor...")
+warn("🚀 Fetching test functions from GitHub...")
 task.wait(3.5)
 print("\n")
 
--- Table to store test results
-local tests = {
-    { "identifyexecutor", function() return identifyexecutor ~= nil end },
-    { "gethui", function() return gethui ~= nil end },
-    { "getgenv", function() return getgenv ~= nil end },
-    { "getrenv", function() return getrenv ~= nil end },
-    { "getreg", function() return getreg ~= nil end },
-    { "debug library", function() return debug ~= nil end },
-    { "setreadonly", function() return setreadonly ~= nil end },
-    { "isreadonly", function() return isreadonly ~= nil end },
-    { "hookfunction", function() return hookfunction ~= nil end },
-    { "getrawmetatable", function() return getrawmetatable ~= nil end },
-    { "checkcaller", function() return checkcaller ~= nil end },
-    { "newcclosure", function() return newcclosure ~= nil end },
-    { "setclipboard", function() return setclipboard ~= nil end },
-    { "firesignal", function() return firesignal ~= nil end },
-    { "request/http.request", function() return request ~= nil or (http and http.request) ~= nil end },
-    { "syn functions", function() return syn ~= nil end }
-}
+-- Fetch test functions from the provided GitHub link
+local success, testScript = pcall(game.HttpGet, game, "https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Functions.lua")
+
+if not success then
+    warn("❌ Failed to load test functions from GitHub!")
+    return
+end
+
+-- Execute the fetched script
+local success, err = pcall(function()
+    loadstring(testScript)()
+end)
+
+if not success then
+    warn("❌ Error while executing test functions: " .. err)
+    return
+end
 
 -- Test execution and result calculation
 local totalTests = #tests
@@ -46,7 +44,6 @@ end
 
 -- Success rate calculation
 local successRate = math.floor((passedTests / totalTests) * 100)
-
 
 print("\n")
 -- Final results
