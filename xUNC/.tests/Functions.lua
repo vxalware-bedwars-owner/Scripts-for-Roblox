@@ -1,9 +1,16 @@
+-- Prevents errors from stopping the script
+local function safeTest(func)
+    local success, result = pcall(func)
+    return success and result
+end
+
+-- Loadstring Tests
 local loadstringBasic = safeTest(function() return loadstring("return 1") ~= nil end)
 local loadstringSimple = safeTest(function() return loadstring(game:HttpGet("https://pastebin.com/raw/simpleTest")) ~= nil end)
 local loadstringComplicated = safeTest(function() return loadstring(game:HttpGet("https://pastebin.com/raw/complicatedTest")) ~= nil end)
 
 -- Table to store test results
-local tests = {
+tests = {
     { "loadstring[basic]", function() return loadstringBasic end },
     { "loadstring[simple]", function() return loadstringSimple end },
     { "loadstring[complicated]", function() return loadstringComplicated end },
@@ -77,20 +84,3 @@ local tests = {
     { "setthreadidentity", function() return setthreadidentity ~= nil end },
     { "writefile", function() return writefile ~= nil end }
 }
-
--- Test execution and result calculation
-local totalTests = #tests
-local passedTests = 0
-
-for _, test in ipairs(tests) do
-    local name, func = unpack(test)
-    local success, result = pcall(func)
-
-    if success and result then
-        print("✅ " .. name .. " is supported!")
-        passedTests = passedTests + 1
-    else
-        warn("❌ " .. name .. " is NOT supported!")
-    end
-    task.wait(0.1)
-end
