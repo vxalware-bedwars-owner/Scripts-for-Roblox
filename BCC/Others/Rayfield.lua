@@ -1,10 +1,10 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "BCC 4 Bedwars 😎",
+   Name = "😎 BCC 4 Bedwars 😎",
    Icon = 0,
-   LoadingTitle = "Loading",
-   LoadingSubtitle = "Made by A Nerd",
+   LoadingTitle = "🛏️ BCC 4 Bedwars 🛏️",
+   LoadingSubtitle = "Loading...",
    Theme = "DarkBlue",
 
    DisableRayfieldPrompts = false,
