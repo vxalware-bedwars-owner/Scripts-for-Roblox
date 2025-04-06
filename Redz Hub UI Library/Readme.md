@@ -43,7 +43,7 @@ Dark
 ```lua
   redzlib:SetTheme("Dark")
 ```
-Darkers
+Darker
 ```lua
   redzlib:SetTheme("Darker")
 ```
