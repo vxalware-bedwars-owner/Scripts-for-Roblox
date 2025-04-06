@@ -2,7 +2,7 @@
 **This documentation is for the stable release of Redz Hub Library**
 ## Booting the Library
 ```lua
-local redzlib = loadstring(game:HttpGet("loadstring(game:HttpGet("https://github.com/vxalware-bedwars-owner/Scripts-for-Roblox/blob/main/Redz%20Hub%20UI%20Library/Assets/UI%20Source.lua",true))()"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Redz%20Hub%20UI%20Library/Assets/UI%20Source.lua",true))()"))()
 ```
 
 ## Creating a Window
