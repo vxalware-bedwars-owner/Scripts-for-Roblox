@@ -1,9 +1,11 @@
-## The Redz Hub Ui Lib
+# Redz Hub Library
+**This documentation is for the stable release of Redz Hub Library**
+## Booting the Library
 ```lua
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
 ```
 
-## Window
+## Creating a Window
 ```lua
 local Window = redzlib:MakeWindow({
   Title = "redz Hub : Blox Fruits",
@@ -12,7 +14,7 @@ local Window = redzlib:MakeWindow({
 })
 ```
 
-## Icon 
+## Adding Icons 
 ```lua
 Window:AddMinimizeButton({
     Button = { Image = "rbxassetid://71014873973869", BackgroundTransparency = 0 },
@@ -20,7 +22,7 @@ Window:AddMinimizeButton({
 })
 ```
 
-## Discord invite
+## Adding Discord invites
 ```lua
 Tab1:AddDiscordInvite({
     Name = "Name Hub",
@@ -31,12 +33,12 @@ Tab1:AddDiscordInvite({
 ```
 
 
-## Tab
+## Creating a Tab
 ```lua
 local Tab1 = Window:MakeTab({"Um", "cherry"})
 ```
 
-## Set theme
+## Setting the themes
 Dark
 ```lua
   redzlib:SetTheme("Dark")
@@ -49,20 +51,20 @@ Purple
 ```lua
   redzlib:SetTheme("Purple")
 ```
-## Start tab
+## Adding a Main Tab
 ```lua
 Window:SelectTab(Tab1)
 ```
-## Section
+## Creating a Section
 ```lua
 local Section = Tab1:AddSection({"Section"})
 ```
 
-## Paragraph
+## Adding Paragraphs
 ```lua
 local Paragraph = Tab1:AddParagraph({"Paragraph", "This is a Paragraph\nSecond Line"})
 ```
-## Dialog
+## Creating Dialogs
 ```lua
   local Dialog = Window:Dialog({
     Title = "Dialog",
@@ -80,13 +82,13 @@ local Paragraph = Tab1:AddParagraph({"Paragraph", "This is a Paragraph\nSecond L
     }
   })
 ```
-## Button
+## Creating a Button
 ```lua
 Tab1:AddButton({"Print", function(Value)
 print("Hello World!")
 end})
 ```
-## Toggle 1
+## Making a Toggle
 ```lua
 local Toggle1 = Tab1:AddToggle({
   Name = "Toggle",
@@ -100,7 +102,7 @@ end)
 
 
 
-## Toggle 2
+## A Second Toggle
 ```lua
 Tab1:AddToggle({
     Name = "Toggle",
@@ -113,7 +115,7 @@ Tab1:AddToggle({
 
 
 
-## Sliders
+## Creating Sliders
 ```lua
 Tab1:AddSlider({
   Name = "Speed",
@@ -127,7 +129,7 @@ Tab1:AddSlider({
 })
 ```
 
-## Dropdown
+## Adding a Dropdown
 ```lua
 local Dropdown = Tab1:AddDropdown({
   Name = "Players List",
@@ -141,7 +143,7 @@ local Dropdown = Tab1:AddDropdown({
 })
 ```
 
-## Textbox
+## Making a Textbox
 ```lua
 Tab1:AddTextBox({
   Name = "Name item",
