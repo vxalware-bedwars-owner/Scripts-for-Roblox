@@ -155,7 +155,7 @@ Tab1:AddTextBox({
 })
 ```
 ## Example 
-![Image Alt](Screenshot_2025-02-13-22-22-32-885_com.roblox.client.vnggames.jpg)
+![Image Alt](https://github.com/tbao143/Library-ui/blob/main/Screenshot_2025-02-13-22-22-32-885_com.roblox.client.vnggames.jpg)
 
 ## Credits
 **Credits to Wayback Machine for helping me find the Source**
