@@ -78,5 +78,6 @@ else
     print("😎 Finished the xUNC Test with a " .. successRate .. "% success rate (" .. passedTests .. " out of " .. totalTests .. ")")
     warn("❗ Total tests failed: " .. (totalTests - passedTests))
     print("😏 This test was made by SynthX, with help from A Nerd, and Vxalware")
-    print("xUNC Test Version: Beta 1.0")
+    print("xUNC Test Version: Beta V1.5")
+    warn("Remember! Executor is not supported by xUNC! Test results may be wrong!")
 end
