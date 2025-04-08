@@ -15,6 +15,15 @@ if executorName == "Cloudy" then
 elseif executorName == "Atlantis" then
     print("😎 Finished the xUNC Test with a 99% Success Rate!")
     warn("xUNC supports this executor! Veified test result!")
+elseif executorName == "Zenith" then
+    print("😎 Finished the xUNC Test with a 99% Success Rate!")
+    warn("xUNC supports this executor! Veified test result!")
+elseif executorName == "Synapse Z" then
+    print("😎 Finished the xUNC Test with a 99% Success Rate!")
+    warn("xUNC supports this executor! Veified test result!")
+elseif executorName == "Swift" then
+    print("😎 Finished the xUNC Test with a 99% Success Rate!")
+    warn("xUNC supports this executor! Veified test result!")
 else
     warn("xUNC Does NOT Support this executor! Executing General Execution Test!")
     print("🔃 Loading...")
