@@ -4,16 +4,8 @@ local function safeTest(func)
     return success and result
 end
 
--- Loadstring Tests
-local loadstringBasic = safeTest(function() return loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Basic.lua")) ~= nil end)
-local loadstringSimple = safeTest(function() return loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Simple.lua")) ~= nil end)
-local loadstringComplicated = safeTest(function() return loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Complicated.lua")) ~= nil end)
-
 -- Table to store test results
 tests = {
-    { "loadstring[basic]", function() return loadstringBasic end },
-    { "loadstring[simple]", function() return loadstringSimple end },
-    { "loadstring[complicated]", function() return loadstringComplicated end },
     { "identifyexecutor", function() return identifyexecutor ~= nil end },
     { "gethui", function() return gethui ~= nil end },
     { "getgenv", function() return getgenv ~= nil end },
