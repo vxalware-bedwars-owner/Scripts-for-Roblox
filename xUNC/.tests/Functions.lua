@@ -5,9 +5,9 @@ local function safeTest(func)
 end
 
 -- Loadstring Tests
-local loadstringBasic = safeTest(function() return loadstring("return 1") ~= nil end)
-local loadstringSimple = safeTest(function() return loadstring(game:HttpGet("https://pastebin.com/raw/simpleTest")) ~= nil end)
-local loadstringComplicated = safeTest(function() return loadstring(game:HttpGet("https://pastebin.com/raw/complicatedTest")) ~= nil end)
+local loadstringBasic = safeTest(function() return loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Basic.lua")) ~= nil end)
+local loadstringSimple = safeTest(function() return loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Simple.lua")) ~= nil end)
+local loadstringComplicated = safeTest(function() return loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Complicated.lua")) ~= nil end)
 
 -- Table to store test results
 tests = {
