@@ -26,11 +26,12 @@ elseif executorName == "Swift" then
     warn("xUNC supports this executor! Veified test result!")
 else
     warn("xUNC Does NOT Support this executor! Executing General Execution Test!")
+    task.wait(5)
     print("🔃 Loading...")
     task.wait(5)
     print("🚀 Starting xUNC Test!")
     print("❗ Make sure to join our Discord if you want: https://dsc.gg/vxalware")
-    task.wait(5)
+    task.wait(3.5)
     warn("🚀 Fetching test functions from GitHub...")
     task.wait(3.5)
     print("\n")
@@ -103,6 +104,6 @@ else
     print("😎 Finished the xUNC Test with a " .. successRate .. "% success rate (" .. passedTests .. " out of " .. totalTests .. ")")
     warn("❗ Total tests failed: " .. (totalTests - passedTests))
     print("😏 This test was made by SynthX, with help from A Nerd, and Vxalware")
-    print("xUNC Test Version V1.5")
+    print("xUNC Test Version 1.5")
     warn("Remember! Executor is not supported by xUNC! Test results may be wrong!")
 end
