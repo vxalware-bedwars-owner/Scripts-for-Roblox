@@ -65,6 +65,8 @@ else
     print("loadstringBasic [" .. tostring(results.loadstringBasic) .. "]")
     print("loadstringSimple [" .. tostring(results.loadstringSimple) .. "]")
     print("loadstringComplicated [" .. tostring(results.loadstringComplicated) .. "]")
+    task.wait(3.5)
+    print("\n")
     
     -- Fetch test functions from the provided GitHub link
     local success, testScript = pcall(game.HttpGet, game, "https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Functions.lua")
