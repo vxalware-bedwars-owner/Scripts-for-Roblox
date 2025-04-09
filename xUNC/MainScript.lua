@@ -34,6 +34,31 @@ else
     warn("🚀 Fetching test functions from GitHub...")
     task.wait(3.5)
     print("\n")
+
+    local results = {}
+
+    -- BASIC Test
+    local successBasic = pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Basic.lua"))()
+    end)
+    results.loadstringBasic = successBasic
+
+    -- SIMPLE Test
+    local successSimple = pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Simple.lua"))()
+    end)
+    results.loadstringSimple = successSimple
+
+    -- COMPLICATED Test
+    local successComplicated = pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Complicated.lua"))()
+    end)
+    results.loadstringComplicated = successComplicated
+
+    -- Summary
+    print("loadstringBasic [" .. tostring(results.loadstringBasic) .. "]")
+    print("loadstringSimple [" .. tostring(results.loadstringSimple) .. "]")
+    print("loadstringComplicated [" .. tostring(results.loadstringComplicated) .. "]")
     
     -- Fetch test functions from the provided GitHub link
     local success, testScript = pcall(game.HttpGet, game, "https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Functions.lua")
@@ -78,6 +103,6 @@ else
     print("😎 Finished the xUNC Test with a " .. successRate .. "% success rate (" .. passedTests .. " out of " .. totalTests .. ")")
     warn("❗ Total tests failed: " .. (totalTests - passedTests))
     print("😏 This test was made by SynthX, with help from A Nerd, and Vxalware")
-    print("xUNC Test Version: Beta V1.5")
+    print("xUNC Test Version V1.5")
     warn("Remember! Executor is not supported by xUNC! Test results may be wrong!")
 end
