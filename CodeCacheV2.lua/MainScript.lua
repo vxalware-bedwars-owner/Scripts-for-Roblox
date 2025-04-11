@@ -24,12 +24,12 @@ end)
 
 local drop = drops:Dropdown("Bedwars 🛏️", {"Vape V4", "Night", "AlSploit", "Vxalware", "AuroraGPT", "Voidpaste"}, function(selectedOption)
     
-    if selectedOption == "Vape V4" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/main/NewMainScript.lua"))()
+    if selectedOption == "Cat V5" then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/new-qwertyui/CatV5/main/init.lua'))()
     elseif selectedOption == "Night" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20Modify/MainScript.lua"))()
     elseif selectedOption == "AlSploit" then
-        loadstring(game:HttpGet("https://dpaste.com/BQ7GD3DD2.txt"))()
+        loadstring(game:HttpGet("https://alsploit.bedwars.workers.dev/MainScript.lua?Key=yyy7eG1DjWIulkrfnzDrFP2No1H3si8YVODj93SqCd0jFh1CVk", true))()
     elseif selectedOption == "Vxalware" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Vxalware-Rewrite/refs/heads/main/Vxware-Bedwars.lua"))() -- Credits to Vxalware
     elseif selectedOption == "AuroraGPT" then
