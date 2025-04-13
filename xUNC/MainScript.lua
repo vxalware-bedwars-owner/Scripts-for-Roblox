@@ -12,27 +12,27 @@ print("Executor Identified As: " .. executorName)
 if executorName == "Cloudy" then
     task.wait(5)
     print("😎 Finished the xUNC Test with a 53% Success Rate!")
-    warn("xUNC supports this executor! Veified test result!")
+    warn("xUNC supports this executor! Verified test result!")
 elseif executorName == "Atlantis" then
     task.wait(5)
     print("😎 Finished the xUNC Test with a 99% Success Rate!")
-    warn("xUNC supports this executor! Veified test result!")
+    warn("xUNC supports this executor! Verified test result!")
 elseif executorName == "Zenith" then
     task.wait(5)
     print("😎 Finished the xUNC Test with a 99% Success Rate!")
-    warn("xUNC supports this executor! Veified test result!")
+    warn("xUNC supports this executor! Verified test result!")
 elseif executorName == "Synapse Z" then
     task.wait(5)
     print("😎 Finished the xUNC Test with a 99% Success Rate!")
-    warn("xUNC supports this executor! Veified test result!")
+    warn("xUNC supports this executor! Verified test result!")
 elseif executorName == "Swift" then
     task.wait(5)
     print("😎 Finished the xUNC Test with a 99% Success Rate!")
-    warn("xUNC supports this executor! Veified test result!")
+    warn("xUNC supports this executor! Verified test result!")
 elseif executorName == "Velocity" then
     task.wait(5)
     print("😎 Finished the xUNC Test with a 84% Success Rate!")
-    warn("xUNC supports this executor! Veified test result!")
+    warn("xUNC supports this executor! Verified test result!")
 else
     warn("xUNC Does NOT Support this executor! Executing General Execution Test!")
     task.wait(5)
@@ -71,7 +71,7 @@ else
     print("loadstringComplicated [" .. tostring(results.loadstringComplicated) .. "]")
     task.wait(3.5)
     print("\n")
-    
+
     -- Fetch test functions from the provided GitHub link
     local success, testScript = pcall(game.HttpGet, game, "https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Functions.lua")
     
@@ -106,14 +106,14 @@ else
         end
         task.wait(0.1)
     end
-
+    
     -- Success rate calculation
     local successRate = math.floor((passedTests / totalTests) * 100)
     
-    -- Special case for 100% pass rate
+    -- 100% Success Rate exception
     if successRate == 100 then
         successRate = 99
-        warn("Some loadstrings still may not be supported despite the 100% success rate!")
+        warn("Some loadstrings still may not be supported despite the real 100% success rate!")
     end
     
     print("\n")
