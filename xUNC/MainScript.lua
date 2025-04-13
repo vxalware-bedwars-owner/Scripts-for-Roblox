@@ -33,6 +33,10 @@ elseif executorName == "Velocity" then
     task.wait(5)
     print("😎 Finished the xUNC Test with a 84% Success Rate!")
     warn("xUNC supports this executor! Verified test result!")
+elseif executorName == "Krnl" then
+    task.wait(5)
+    print("😎 Finished the xUNC Test with a 99% Success Rate!")
+    warn("xUNC supports this executor! Verified test result!")
 else
     warn("xUNC Does NOT Support this executor! Executing General Execution Test!")
     task.wait(5)
@@ -113,13 +117,13 @@ else
     -- 100% Success Rate exception
     if successRate == 100 then
         successRate = 99
-        warn("Some loadstrings still may not be supported despite the real 100% success rate!")
+        warn("Some scripts still may not be supported despite the real 100% success rate!")
     end
     
     print("\n")
     print("😎 Finished the xUNC Test with a " .. successRate .. "% success rate (" .. passedTests .. " out of " .. totalTests .. ")")
     warn("❗ Total tests failed: " .. (totalTests - passedTests))
     print("😏 This test was made by SynthX, with help from A Nerd, and Vxalware")
-    print("xUNC Test Version 1.5")
+    print("xUNC Test Version 1.75")
     warn("Remember! Executor is not supported by xUNC! Test results may be wrong!")
 end
