@@ -74,10 +74,20 @@ tests = {
     { "setscriptable", function() return setscriptable ~= nil end },
     { "setthreadidentity", function() return setthreadidentity ~= nil end },
     { "writefile", function() return writefile ~= nil end },
-    
-    { "loadstring_basic", function()
-        return pcall(function()
-            return loadstring("return true")()
+    -- Loadstring Tests
+    { "Full loadstring", function()
+        local basicPass = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Basic.lua"))()
         end)
+        
+        local simplePass = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Simple.lua"))()
+        end)
+        
+        local complicatedPass = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Complicated.lua"))()
+        end)
+        
+        return basicPass and simplePass and complicatedPass
     end}
 }
