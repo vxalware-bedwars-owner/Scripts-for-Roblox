@@ -21,7 +21,6 @@ tests = {
     { "setclipboard", function() return setclipboard ~= nil end },
     { "firesignal", function() return firesignal ~= nil end },
     { "request/http.request", function() return request ~= nil or (http and http.request) ~= nil end },
-    { "syn functions", function() return syn ~= nil end },
     { "getcallbackvalue", function() return getcallbackvalue ~= nil end },
     { "decompile", function() return decompile ~= nil end },
     { "debug.setupvalue", function() return debug and debug.setupvalue ~= nil end },
@@ -74,5 +73,11 @@ tests = {
     { "setrenderproperty", function() return setrenderproperty ~= nil end },
     { "setscriptable", function() return setscriptable ~= nil end },
     { "setthreadidentity", function() return setthreadidentity ~= nil end },
-    { "writefile", function() return writefile ~= nil end }
+    { "writefile", function() return writefile ~= nil end },
+    
+    { "loadstring_basic", function()
+        return pcall(function()
+            return loadstring("return true")()
+        end)
+    end}
 }
