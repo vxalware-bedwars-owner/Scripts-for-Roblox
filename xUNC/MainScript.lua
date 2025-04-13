@@ -106,12 +106,17 @@ else
         end
         task.wait(0.1)
     end
-    
+
     -- Success rate calculation
     local successRate = math.floor((passedTests / totalTests) * 100)
     
+    -- Special case for 100% pass rate
+    if successRate == 100 then
+        successRate = 99
+        warn("Some loadstrings still may not be supported despite the 100% success rate!")
+    end
+    
     print("\n")
-    -- Final results
     print("😎 Finished the xUNC Test with a " .. successRate .. "% success rate (" .. passedTests .. " out of " .. totalTests .. ")")
     warn("❗ Total tests failed: " .. (totalTests - passedTests))
     print("😏 This test was made by SynthX, with help from A Nerd, and Vxalware")
