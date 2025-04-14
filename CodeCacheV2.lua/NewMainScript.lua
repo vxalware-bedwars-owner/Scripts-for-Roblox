@@ -31,7 +31,7 @@ local imageButton = Instance.new("ImageButton")
 imageButton.Parent = ScreenGui
 imageButton.Name = "Toggle Button"
 imageButton.Position = UDim2.new(0.5, 0, 2, 0)
-imageButton.Size = UDim2.new(0, 50, 0, 50) -- FIXED SIZE TO AVOID STRETCHING
+imageButton.Size = UDim2.new(0, 50, 0, 50)
 imageButton.Image = "rbxassetid://6031075938"
 imageButton.BackgroundTransparency = 1
 imageButton.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -41,7 +41,7 @@ imageButton.ZIndex = 999
 --> Creates UICorner for Button <--
 local imageButtonUICorner = Instance.new("UICorner")
 imageButtonUICorner.Parent = imageButton
-imageButtonUICorner.CornerRadius = UDim.new(1, 0) -- Makes it round
+imageButtonUICorner.CornerRadius = UDim.new(1, 0)
 
 --> Blur Effect <--
 local Blur = Instance.new("BlurEffect")
