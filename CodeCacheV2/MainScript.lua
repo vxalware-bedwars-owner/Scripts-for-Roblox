@@ -27,7 +27,7 @@ local drop = drops:Dropdown("Bedwars 🛏️", {"Vape V4", "Night", "AlSploit", 
     if selectedOption == "Cat V5" then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/new-qwertyui/CatV5/main/init.lua'))()
     elseif selectedOption == "Night" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20Modify/MainScript.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20VX/MainScript.lua"))()
     elseif selectedOption == "AlSploit" then
         loadstring(game:HttpGet("https://alsploit.bedwars.workers.dev/MainScript.lua?Key=yyy7eG1DjWIulkrfnzDrFP2No1H3si8YVODj93SqCd0jFh1CVk", true))()
     elseif selectedOption == "Vxalware" then
