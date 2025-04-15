@@ -34,7 +34,7 @@ if isfolder("Night") then
 
     local startTime = tick()
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20Modify/Assets/Night%20Extension.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20VX/Assets/Night%20Extension.lua"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/warprbx/NightRewrite/refs/heads/main/Night/Loader.luau"))()
 
     local endTime = tick()
@@ -46,7 +46,7 @@ if isfolder("Night") then
 else
     -- Create folder and dev file
     makefolder("Night")
-    writefile("Night/Test.txt", game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20Modify/Assets/Night%20VX%20ACL/Test.txt"))
+    writefile("Night/Test.txt", game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20VX/Assets/Night%20VX%20ACL/Test.txt"))
 
     local Players = game:GetService("Players")
     local player = Players.LocalPlayer
@@ -82,7 +82,7 @@ else
 
     local startTime = tick()
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20Modify/Assets/Night%20Extension.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Night%20VX/Assets/Night%20Extension.lua"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/warprbx/NightRewrite/refs/heads/main/Night/Loader.luau"))()
 
     local endTime = tick()
