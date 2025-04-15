@@ -4,7 +4,7 @@ local TweenService = game:GetService("TweenService")
 local Lighting = game:GetService("Lighting")
 
 --> CodeCache Beta <--
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/CodeCacheV2.lua/MainScript.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/CodeCacheV2/MainScript.lua"))()
 
 --> CodeCache Beta Variables <--
 local DiscordUI = CoreGui:FindFirstChild("Discord")
