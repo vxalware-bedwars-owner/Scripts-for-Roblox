@@ -12,6 +12,10 @@ print("Executor Identified As: " .. executorName)
 if executorName == "Cloudy" then
     task.wait(5)
     print("😎 Finished the xUNC Test with a 53% Success Rate!")
+    warn("xUNC supports this executor! Verified test result! (Booty Ahh executor 🙏💀)")
+elseif executorName == "Xeno" then
+    task.wait(5)
+    print("😎 Finished the xUNC Test with a 53% Success Rate! (Booty Ahh executor 🙏💀)")
     warn("xUNC supports this executor! Verified test result!")
 elseif executorName == "Atlantis" then
     task.wait(5)
