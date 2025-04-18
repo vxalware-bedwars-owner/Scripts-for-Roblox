@@ -76,18 +76,18 @@ tests = {
     { "writefile", function() return writefile ~= nil end },
     -- Loadstring Tests
     { "Full loadstring", function()
-        local basicOk = pcall(function()
+        local basicPass = pcall(function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Basic.lua"))()
         end)
         
-        local simpleOk = pcall(function()
+        local simplePass = pcall(function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Simple.lua"))()
         end)
         
-        local complicatedOk = pcall(function()
+        local complicatedPass = pcall(function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/xUNC/.tests/Loadstrings/Complicated.lua"))()
         end)
         
-        return basicOk and simpleOk and complicatedOk
+        return basicPass and simplePass and complicatedPass
     end}
 }
