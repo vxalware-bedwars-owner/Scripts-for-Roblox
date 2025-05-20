@@ -31,7 +31,7 @@ local drop = drops:Dropdown("Bedwars 🛏️", {"Vape V4", "Night", "AlSploit", 
     elseif selectedOption == "AlSploit" then
         loadstring(game:HttpGet("https://alsploit.bedwars.workers.dev/MainScript.lua?Key=yyy7eG1DjWIulkrfnzDrFP2No1H3si8YVODj93SqCd0jFh1CVk", true))()
     elseif selectedOption == "Vxalware" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Vxalware-Rewrite/refs/heads/main/Vxware-Bedwars.lua"))() -- Credits to Vxalware
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Vxalware-Rewrite/refs/heads/main/MainScript.lua"))() -- Credits to Vxalware
     elseif selectedOption == "AuroraGPT" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/Aurora/main/Aurora_Loader"))()
     elseif selectedOption == "Voidpaste" then
