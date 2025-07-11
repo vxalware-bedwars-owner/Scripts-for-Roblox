@@ -42,26 +42,37 @@ local drops = serv:Channel("C Game Scripts")
 
 local drops = serv:Channel("D Game Scripts")
 
-local drop = drops:Dropdown("Doors 🚪", {"Redz Hub", "Speed Hub X"}, function(selectedOption)
+local drop = drops:Dropdown("Doors 🚪", {"Redz Hub", "n00dy Hub"}, function(selectedOption)
     
     if selectedOption == "Redz Hub" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))()
-    elseif selectedOption == "Speed Hub X" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Doors.lua"))()
+    elseif selectedOption == "n00dy Hub" then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/mazzikasjjzjzj/Key/main/DOORS%20%20%5BNEW%5D'))()
     end
     print("You selected: " .. selectedOption)
 end)
+
+local textbs = serv:Channel("Textboxes")
+
+textbs:Textbox(
+    "for noody hub, Click M On Keybord and put Key = 8X5nu95XMzKhrfxEzTNhxTW7",
+    "Ok!",
+    true,
+    function(t)
+        print(t)
+    end
+)
 
 local drops = serv:Channel("E Game Scripts")
 
 local drops = serv:Channel("F Game Scripts")
 
-local drop = drops:Dropdown("Fisch 🐟", {"Redz Hub", "Speed Hub X"}, function(selectedOption)
+local drop = drops:Dropdown("Fisch 🐟", {"Redz Hub", "Radeon Hub"}, function(selectedOption)
     
     if selectedOption == "Redz Hub" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))()
-    elseif selectedOption == "Speed Hub X" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    elseif selectedOption == "Radeon Hub" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RadeonScripts/RadeonHubMain/main/MainRobloxExploit"))()
     end
     print("You selected: " .. selectedOption)
 end)
