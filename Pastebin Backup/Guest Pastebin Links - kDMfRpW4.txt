@@ -2,5 +2,4 @@ Guest Pastebin Links:
 Loadstring Guider: https://loadstringer.mattlawz.dev/
 AntiHit Counter script: https://pastebin.com/raw/N0t1z4pT [IN PROGRESS]
 FOV Changer Script: https://pastebin.com/raw/g5azNFjf
-No fall dmg Bedwars: https://pastebin.com/raw/esznFyu0 [IN PROGRESS]
-Random AlSploit: https://pastebin.com/raw/0mBg0vYh
+AlSploit fix with config: https://pastebin.com/raw/dEVN5hhc
