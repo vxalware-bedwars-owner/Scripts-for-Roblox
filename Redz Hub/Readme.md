@@ -2,15 +2,15 @@
 **This documentation is for the stable release of Redz Hub Library**
 ## Booting the Library
 ```lua
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Redz%20Hub%20UI%20Library/Assets/UI%20Source.lua",true))()"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Redz%20Hub/assets/UI%20Source.lua"))()
 ```
 
 ## Creating a Window
 ```lua
 local Window = redzlib:MakeWindow({
-  Title = "redz Hub : Blox Fruits",
-  SubTitle = "by redz9999",
-  SaveFolder = "testando | redz lib v5.lua"
+  Title = "Redz Hub UI Library",
+  SubTitle = "by SynthX",
+  SaveFolder = "redzlibgui"
 })
 ```
 
@@ -35,7 +35,7 @@ Tab1:AddDiscordInvite({
 
 ## Creating a Tab
 ```lua
-local Tab1 = Window:MakeTab({"Um", "cherry"})
+local Tab1 = Window:MakeTab({"Pro tab", "cherry"})
 ```
 
 ## Setting the themes
