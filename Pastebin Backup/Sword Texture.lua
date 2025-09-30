@@ -6,4 +6,5 @@ workspace.CurrentCamera.Viewmodel.ChildAdded:Connect(function(x)
             x.Handle.BrickColor = BrickColor.new("Hot pink")
         end
     end
+
 end)
