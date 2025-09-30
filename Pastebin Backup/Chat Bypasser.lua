@@ -2,7 +2,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Chat Bypasser", HidePremium = false, IntroText = "Chat Bypasser", SaveConfig = false})
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/vqmpjayZ/More-Scripts/main/Anti-Chat-Logger'))() -- anti chat logger (not by me)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/vqmpjayZ/More-Scripts/refs/heads/main/Anti-Chat-Logger.lua'))() -- anti chat logger (not made by me. Credits: vqmpjayZ)
 
 function chat(msg)
 
@@ -26,7 +26,7 @@ local method = nil
 
 chatTab:AddDropdown({
 	Name = "Method",
-	Options = {"ěx́ǎḿṕĺě", "éxạmṕĺe", "ẹ̲х̲ạ̲ṃ̲р̲ḷ̲ẹ̲", "e>x>a>m>p>l>e", "￵example", "3></-\\/\\/\\p|_3"},
+	Options = {"ěx́ǎḿṕĺě", "éxạmṕĺe", "ẹ̲х̲ạ̲ṃ̲р̲ḷ̲ẹ̲", "e>x>a>m>p>l>e", "￵example", "3></-\\/\\/\\p|_3"},
 	Callback = function(val)
         method = val
 	end
@@ -37,54 +37,54 @@ function bypasstext(text, method)
         local function addAccents(word)
             local accents = {
                 a = "ǎ",
-                b = "ḃ",
+                b = "ḃ",
                 c = "ć",
                 d = "d́",
                 e = "ě",
-                f = "ḟ",
-                g = "ġ",
-                h = "ḣ",
+                f = "ḟ",
+                g = "ġ",
+                h = "ḣ",
                 i = "í",
                 j = "j́",
-                k = "ḱ",
-                l = "ĺ",
+                k = "ḱ",
+                l = "ĺ",
                 m = "ḿ",
                 n = "n̋",
                 o = "ō",
-                p = "ṕ",
+                p = "ṕ",
                 q = "q́",
-                r = "ŕ",
-                s = "ś",
+                r = "ŕ",
+                s = "ś",
                 t = "t̋",
                 u = "ū",
                 v = "v̇",
-                w = "ẃ",
+                w = "ẃ",
                 x = "x́",
                 y = "ý",
                 z = "ź",
                 A = "Ǎ",
-                B = "Ḃ",
+                B = "Ḃ",
                 C = "Ć",
                 D = "D́",
                 E = "Ě",
-                F = "Ḟ",
-                G = "Ġ",
-                H = "Ḣ",
+                F = "Ḟ",
+                G = "Ġ",
+                H = "Ḣ",
                 I = "Í",
                 J = "J́",
-                K = "Ḱ",
-                L = "Ĺ",
+                K = "Ḱ",
+                L = "Ĺ",
                 M = "Ḿ",
                 N = "N̋",
                 O = "Ō",
-                P = "Ṕ",
+                P = "Ṕ",
                 Q = "Q́",
-                R = "Ŕ",
-                S = "Ś",
+                R = "Ŕ",
+                S = "Ś",
                 T = "T̋",
                 U = "Ū",
                 V = "V̇",
-                W = "Ẃ",
+                W = "Ẃ",
                 X = "X́",
                 Y = "Ý",
                 Z = "Ź"
@@ -116,54 +116,54 @@ function bypasstext(text, method)
         local function addAccents2(word)
             local accents2 = {
                 a = "ạ",
-                b = "ḃ",
+                b = "ḃ",
                 c = "c",
                 d = "d́",
                 e = "e",
-                f = "ḟ",
-                g = "ġ",
-                h = "ḣ",
+                f = "ḟ",
+                g = "ġ",
+                h = "ḣ",
                 i = "i",
                 j = "j́",
                 k = "ḳ",
-                l = "ĺ",
+                l = "ĺ",
                 m = "m",
                 n = "n̋",
                 o = "o",
-                p = "ṕ",
+                p = "ṕ",
                 q = "q́",
-                r = "ŕ",
+                r = "ŕ",
                 s = "ṣ",
                 t = "t",
                 u = "ụ",
                 v = "v̇",
-                w = "ẃ",
+                w = "ẃ",
                 x = "x́",
                 y = "y",
                 z = "z",
                 A = "Ạ",
-                B = "Ḃ",
+                B = "Ḃ",
                 C = "C",
                 D = "D́",
                 E = "E",
-                F = "Ḟ",
-                G = "Ġ",
-                H = "Ḣ",
+                F = "Ḟ",
+                G = "Ġ",
+                H = "Ḣ",
                 I = "I",
                 J = "J́",
-                K = "Ḱ",
-                L = "Ĺ",
+                K = "Ḱ",
+                L = "Ĺ",
                 M = "M",
                 N = "N",
                 O = "O",
-                P = "Ṕ",
+                P = "Ṕ",
                 Q = "Q́",
-                R = "Ŕ",
+                R = "Ŕ",
                 S = "Ṣ",
                 T = "T",
                 U = "Ụ",
                 V = "V̇",
-                W = "Ẃ",
+                W = "Ẃ",
                 X = "X́",
                 Y = "Y",
                 Z = "Z"
@@ -421,9 +421,9 @@ chatTab:AddTextbox({
 	TextDisappear = true,
 	Callback = function(val)
         if val ~= "" then
-            if method == "ěx́ǎḿṕĺě" then
+            if method == "ěx́ǎḿṕĺě" then
                 chat(bypasstext(val, 1))
-            elseif method == "éxạmṕĺe" then
+            elseif method == "éxạmṕĺe" then
                 chat(bypasstext(val, 2))
             elseif method == "ẹ̲х̲ạ̲ṃ̲р̲ḷ̲ẹ̲" then
                 chat(bypasstext(val, 3))
@@ -480,10 +480,10 @@ chatTab:AddToggle({
         textBox.FocusLost:Connect(function(enter)
             if enter and autobypass then
                 if textBox.Text ~= "" then
-                    if method == "ěx́ǎḿṕĺě" then
+                    if method == "ěx́ǎḿṕĺě" then
                         chat(bypasstext(textBox.Text, 1))
                         textBox.Text = ""
-                    elseif method == "éxạmṕĺe" then
+                    elseif method == "éxạmṕĺe" then
                         chat(bypasstext(textBox.Text, 2))
                         textBox.Text = ""
                     elseif method == "ẹ̲х̲ạ̲ṃ̲р̲ḷ̲ẹ̲" then
