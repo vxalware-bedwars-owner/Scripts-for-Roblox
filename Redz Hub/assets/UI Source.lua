@@ -61,7 +61,7 @@ local redzlib = {
   Options = {},
   Flags = {},
   Tabs = {},
-  Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Redz%20Hub/assets/Feather%20Icons.lua"))()
+  Icons = "https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Redz%20Hub/assets/Feather%20Icons.lua"
 }
 
 local ViewportSize = workspace.CurrentCamera.ViewportSize
