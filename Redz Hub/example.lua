@@ -1,4 +1,4 @@
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Redz%20Hub/assets/UI%20Source.lua"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
 
 local Window = redzlib:MakeWindow({
     Title = "Redz Hub UI Library",
