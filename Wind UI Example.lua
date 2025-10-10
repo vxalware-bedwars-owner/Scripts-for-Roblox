@@ -171,7 +171,6 @@ local Tab2 = Window:Tab({
 local Paragraph = Tab2:Paragraph({
     Title = "Credits",
     Desc = "This example is made by SynthX. All credits go to footagesus for making this UI Library",
-    Color = "Black",
     Image = "",
     ImageSize = 30,
     Thumbnail = "",
@@ -188,7 +187,7 @@ local Paragraph = Tab2:Paragraph({
 
 WindUI:Notify({
     Title = "Finished Loading!",
-    Content = "Thank you for using wing ui!",
+    Content = "Thank you for using wind ui!",
     Duration = 5,
     Icon = "arrow-right",
 }) -- notification
