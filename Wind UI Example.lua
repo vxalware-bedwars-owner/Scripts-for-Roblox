@@ -82,7 +82,7 @@ local Button = Tab1:Button({
 local Colorpicker = Tab1:Colorpicker({
     Title = "Colorpicker",
     Desc = "A Colorpicker",
-    Default = Color3.fromRGB(0, 255, 0),
+    Default = Color3.fromRGB(0, 0, 255),
     Transparency = 0,
     Locked = false,
     Callback = function(color) 
@@ -102,7 +102,7 @@ local Dropdown = Tab1:Dropdown({
 
         -- executes based on selected values
         if table.find(option, "...") then
-            print("...")
+            print("nil.start code")
         end
         if table.find(option, "You're gay") then
             print("You're not gay")
@@ -117,7 +117,7 @@ local Input = Tab1:Input({
     Title = "Input",
     Desc = "An Input",
     Value = "Default value",
-    InputIcon = "bird",
+    InputIcon = "arrow-right",
     Type = "Input", -- or "Textarea"
     Placeholder = "Enter text...",
     Callback = function(input) 
@@ -150,7 +150,7 @@ local Slider = Tab1:Slider({
 local Toggle = Tab1:Toggle({
     Title = "Toggle",
     Desc = "A Toggle",
-    Icon = "bird",
+    Icon = "check",
     Type = "Checkbox",
     Default = false,
     Callback = function(state)
@@ -171,7 +171,7 @@ local Tab2 = Window:Tab({
 local Paragraph = Tab2:Paragraph({
     Title = "Credits",
     Desc = "This example is made by SynthX. All credits go to footagesus for making this UI Library",
-    Color = "Red",
+    Color = "Black",
     Image = "",
     ImageSize = 30,
     Thumbnail = "",
@@ -179,10 +179,17 @@ local Paragraph = Tab2:Paragraph({
     Locked = false,
     Buttons = {
         {
-            Icon = "bird",
-            Title = "Button",
-            Callback = function() print("1 Button") end,
+            Icon = "arrow-right",
+            Title = "Ok",
+            Callback = function() print("Thanks for using!") end,
         }
     }
 }) -- paragraph
--- All credits go to footagesus for UI Library. Example.lua made by SynthX
+
+WindUI:Notify({
+    Title = "Finished Loading!",
+    Content = "Thank you for using wing ui!",
+    Duration = 5,
+    Icon = "arrow-right",
+}) -- notification
+-- Wind UI Example.lua by SynthX. All credits go to footagesus for making this UI Library!
