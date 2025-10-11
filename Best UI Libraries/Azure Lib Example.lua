@@ -21,7 +21,7 @@ _G.CustomTheme = {
     Dropdown_Option_Text_Color = Color3.fromRGB(0, 0, 0)
 }
 
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/2xDTKdpV", true))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/azure", true))()
 
 local AimbotTab = Library:CreateTab("Aimbot", "This is where you modify the Aimbot")
 
