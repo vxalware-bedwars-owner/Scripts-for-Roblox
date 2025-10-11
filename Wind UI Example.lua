@@ -41,6 +41,7 @@ local Window = WindUI:CreateWindow({
 }) -- total window code
 
 Window:SetToggleKey(Enum.KeyCode.K)
+Window:SetIconSize(26)
 Window:EditOpenButton({
     Title = "Open Example UI",
     Icon = "monitor",
@@ -187,8 +188,8 @@ local Paragraph = Tab2:Paragraph({
 
 WindUI:Notify({
     Title = "Finished Loading!",
-    Content = "Thank you for using wind ui!",
+    Content = "Thank you for using Wind UI! Press 'K' to toggle GUI!",
     Duration = 5,
     Icon = "arrow-right",
 }) -- notification
--- Wind UI Example.lua by SynthX. All credits go to footagesus for making this UI Library!
+-- This is just an example. Official doccumentation with other features may be found at https://footagesus.github.io/WindUI-Docs/
