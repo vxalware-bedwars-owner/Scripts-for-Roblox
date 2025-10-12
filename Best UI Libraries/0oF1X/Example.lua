@@ -1,4 +1,4 @@
-local _0oF1X = loadstring(game:HttpGet("https://raw.githubusercontent.com/<yourusername>/<reponame>/main/0oF1X.lua", true))() -- boot lib
+local _0oF1X = loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Best%20UI%20Libraries/0oF1X/source.lua", true))() -- boot lib
 
 local Window = _0oF1X:MakeWindow({
 	Name = "0oF1X Example",
