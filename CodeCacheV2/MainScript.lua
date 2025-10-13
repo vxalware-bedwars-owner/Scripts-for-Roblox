@@ -6,10 +6,10 @@ local drops = serv:Channel("A Game Scripts")
 
 local drops = serv:Channel("B Game Scripts")
 
-local drop = drops:Dropdown("Bedwars 🛏️", {"Cat V5", "Oof"}, function(selectedOption)
+local drop = drops:Dropdown("Bedwars 🛏️", {"Vxalware", "Oof"}, function(selectedOption)
     -- I don't rlly know if this is how the dropdown handling works for this UI Lib 💀
     if selectedOption == "Vxalware" then
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/new-qwertyui/CatV5/main/init.lua'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/vxalware-bedwars-owner/Vxalware/refs/heads/main/Loader.lua'))()
     elseif selectedOption == "Oof" then
         print("Oof")
     end
