@@ -32,7 +32,7 @@ local Window = WindUI:CreateWindow({
         Key = { "1234", "5678" },
         Note = "Example Key System.",
         URL = "https://youtube.com/",
-        SaveKey = false, -- automatically save and load the key.
+        SaveKey = true, -- automatically save and load the key.
     },
 }) -- Window
 
@@ -87,7 +87,7 @@ local Colorpicker = MainTab:Colorpicker({
     end
 }) -- Colourpicker
 
-local Dropdown = Tab1:Dropdown({
+local Dropdown = MainTab:Dropdown({
     Title = "Multi Dropdown",
     Values = { "None", "Example 1", "Example 2" },
     Value = { "None" },
@@ -109,7 +109,7 @@ local Dropdown = Tab1:Dropdown({
     end
 }) -- Dropdown
 
-local Input = Tab1:Input({
+local Input = MainTab:Input({
     Title = "Input",
     Desc = "An Input",
     Value = "Default value",
@@ -121,7 +121,7 @@ local Input = Tab1:Input({
     end
 }) -- Input
 
-local Slider = Tab1:Slider({
+local Slider = MainTab:Slider({
     Title = "WalkSpeed",
     Step = 1,
     Value = {
@@ -141,9 +141,9 @@ local Slider = Tab1:Slider({
             warn("Humanoid not found")
         end
     end
-}) -- slider (change walkspeed)
+}) -- Slider
 
-local Toggle = Tab1:Toggle({
+local Toggle = MainTab:Toggle({
     Title = "Toggle",
     Desc = "A Toggle",
     Icon = "check",
@@ -156,15 +156,15 @@ local Toggle = Tab1:Toggle({
             print("unexecuted")
         end
     end
-}) -- toggle with easy logic
+}) -- Toggle
 
-local Tab2 = Window:Tab({
+local CreditsTab = Window:Tab({
     Title = "Credits",
-    Icon = "arrow-big-right-dash",
+    Icon = "crown",
     Locked = false,
-}) -- second tab
+}) -- Credits Tab
 
-local Paragraph = Tab2:Paragraph({
+local Paragraph = CreditsTab:Paragraph({
     Title = "Credits",
     Desc = "This example is made by SynthX. All credits go to footagesus for making this UI Library",
     Image = "",
@@ -179,12 +179,12 @@ local Paragraph = Tab2:Paragraph({
             Callback = function() print("Thanks for using!") end,
         }
     }
-}) -- paragraph
+}) -- Paragraph
 
 WindUI:Notify({
     Title = "Finished Loading!",
     Content = "Thank you for using Wind UI! Press 'K' to toggle GUI!",
     Duration = 5,
-    Icon = "arrow-right",
-}) -- notification
+    Icon = "check",
+}) -- Notification
 -- This is just an example. Official doccumentation with other features may be found at https://footagesus.github.io/WindUI-Docs/
