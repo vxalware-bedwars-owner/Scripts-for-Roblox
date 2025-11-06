@@ -4,7 +4,7 @@ local TweenService = game:GetService("TweenService")
 local Lighting = game:GetService("Lighting")
 
 --> MainScript
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts-for-Roblox/refs/heads/main/Discord%20UI%20Icon%20Skid/MainScript.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vxalware-bedwars-owner/Scripts/refs/heads/main/Discord%20UI%20Icon%20Skid/MainScript.lua"))()
 
 --> Variables
 local DiscordUI = CoreGui:FindFirstChild("Discord")
